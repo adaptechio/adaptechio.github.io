@@ -16,28 +16,28 @@ people:
   social:
     - title: github
       url: #
-    - title: linked
+    - title: linkedin
       url: #
 
 - name: Travis Nguyen
   pic: 2
   position: Chief Operating Officer
   social:
-    - title: linked
+    - title: linkedin
       url: #
 
 - name: Mohammed Faruq
   pic: 3
   position: Chief Security Officer & Chief Information Security Officer 
   social:
-    - title: linked
+    - title: linkedin
       url: #
 
 - name: Thomas Nguyen
   pic: 1
   position: Chief Technology Officer & Chief Information Officer 
   social:
-    - title: linked
+    - title: linkedin
       url: #
     - title: github
       url: #
