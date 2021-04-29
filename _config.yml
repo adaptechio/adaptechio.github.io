@@ -1,1 +1,58 @@
-theme: jekyll-theme-cayman
+url: https://y7kim.github.io
+baseurl: /agency-jekyll-theme/
+
+# Site settings
+title: AdapTech LLC
+email: chameleon@adaptech.io
+description: "This is an awesome description for AdapTech LLC."
+version: "v0.1.0"
+
+
+# Team names, titles and social links
+people:
+- name: Benjamin Smith
+  pic: 1
+  position: Chief Executive Officer
+  social:
+    - title: github
+      url: #
+    - title: linkedin
+      url: #
+
+- name: Travis Nguyen
+  pic: 2
+  position: Chief Operating Officer
+  social:
+    - title: linkedin
+      url: #
+
+- name: Mohammed Faruq
+  pic: 3
+  position: Chief Security Officer & Chief Information Security Officer 
+  social:
+    - title: linkedin
+      url: #
+
+- name: Thomas Nguyen
+  pic: 1
+  position: Chief Technology Officer & Chief Information Officer 
+  social:
+    - title: linkedin
+      url: #
+    - title: github
+      url: #
+      
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: github
+    url: http://github.com/adaptechio
+
+# Postal address (add as many lines as necessary)
+# address:
+#   - line: 3481 Melrose Place
+#   - line: Beverly Hills, CA 90210
+
+# Build settings
+markdown: kramdown
+permalink: pretty
