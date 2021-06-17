@@ -11,7 +11,7 @@ version: "v0.1.0"
 # Team names, titles and social links
 people:
 - name: Benjamin Smith
-  pic: 1
+  pic: BenSmith
   position: Chief Executive Officer
   social:
     - title: github
