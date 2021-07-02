@@ -1,0 +1,29 @@
+---
+version: '3'
+
+services:
+  adaptechio-site:
+    build:
+      context: ./
+    restart: unless-stopped
+    environment:
+      SITE_VERSION: dev
+    labels:
+      - "ORG=AdapTech.io"
+    volumes:
+      - "./:/usr/src/app"
+    ports:
+    - "4000:4000"
+  adaptechio-site-simplebuild:
+    build:
+      context: ./
+      dockerfile: Dockerfile.simple
+    restart: unless-stopped
+    environment:
+      SITE_VERSION: dev
+    labels:
+      - "ORG=AdapTech.io"
+    volumes:
+      - "./:/usr/src/app"
+    ports:
+      - "4000:4000"
