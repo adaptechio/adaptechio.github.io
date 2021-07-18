@@ -16,10 +16,10 @@ Local Development Instructions
 
 Docker
 ====================
-# Build
+- Build
 ```docker-compose build```
 
-# Run
+- Run
 ```docker-compose up```
 ctrl-c to quit and shutdown container
 
