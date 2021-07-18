@@ -1,0 +1,34 @@
+/* Variables */
+@import "adaptech-io/variables";
+
+/* Mixins and functions */
+@import "adaptech-io/vendor/breakpoint/breakpoint";
+@include breakpoint-set("to ems", true);
+@import "adaptech-io/vendor/magnific-popup/magnific-popup"; // Magnific Popup
+@import "adaptech-io/vendor/susy/susy";
+@import "adaptech-io/mixins";
+
+/* Core CSS */
+@import "adaptech-io/reset";
+@import "adaptech-io/base";
+@import "adaptech-io/forms";
+@import "adaptech-io/tables";
+@import "adaptech-io/animations";
+
+/* Components */
+@import "adaptech-io/buttons";
+@import "adaptech-io/notices";
+@import "adaptech-io/masthead";
+@import "adaptech-io/navigation";
+@import "adaptech-io/footer";
+@import "adaptech-io/search";
+@import "adaptech-io/syntax";
+
+/* Utility classes */
+@import "adaptech-io/utilities";
+
+/* Layout specific */
+@import "adaptech-io/page";
+@import "adaptech-io/archive";
+@import "adaptech-io/sidebar";
+@import "adaptech-io/print";
