@@ -5,8 +5,8 @@
 /*
    Typography
    ========================================================================== */
-
 $doc-font-size: 16 !default;
+
 
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)
@@ -14,8 +14,8 @@ $indent-var: 1.3em !default;
 
 /* system typefaces */
 $serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
-  "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+$droid-serif: '"Droid Serif", "Helvetica Neue", Helvetica,Arial,sans-serif';
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
 /* sans serif typefaces */
@@ -29,7 +29,15 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $sans-serif !default;
+$global-primary-color: #1e8900;
+$global-secondary-color: #616161;
+$global-secondary-dark-color: #373737;
+$global-text-muted: #777;
+$global-text-primary: #fff;
+
+$global-font-primary: $sans-serif !default;
+$global-font-secondary: $droid-serif !default;
+
 $header-font-family: $sans-serif !default;
 $caption-font-family: $serif !default;
 
@@ -42,6 +50,11 @@ $type-size-5: 1.25em !default;
 $type-size-6: 1em !default;
 $type-size-7: 0.8em !default;
 $type-size-8: 0.625em !default;
+
+/* text size */
+$text-size-primary: 14px !default;
+$text-size-primary-large: 14px !default;
+$text-line-height-primary: 1.75 !default;
 
 /* headline scale */
 $h-size-1: 1.563em !default; // ~25.008px
@@ -167,3 +180,11 @@ $navicon-width: 1.5rem !default;
 $navicon-height: 0.25rem !default;
 $global-transition: all 0.2s ease-in-out !default;
 $intro-transition: intro 0.3s both !default;
+
+/*
+   Anchors
+   ========================================================================== */
+
+$anchor-outline: 0;
+$anchor-color: $global-primary-color;
+$anchor-active: $global-secondary-dark-color;

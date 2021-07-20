@@ -4,5 +4,5 @@
 
 @charset "utf-8";
 
-@import "adaptech-io/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "adaptech-io/skins/{{ site.skin | default: 'default' }}"; // skin
 @import "adaptech-io"; // main partials

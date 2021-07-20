@@ -1,6 +1,7 @@
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
+@import "variables";
 
 html {
   /* sticky footer fix */
@@ -12,13 +13,14 @@ body {
   margin: 0;
   padding: 0;
   color: $text-color;
-  font-family: $global-font-family;
+  font-family: $global-font-primary;
   line-height: 1.5;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
     overflow: hidden;
   }
+  overflow-x: hidden;
 }
 
 h1,
@@ -29,8 +31,9 @@ h5,
 h6 {
   margin: 2em 0 0.5em;
   line-height: 1.2;
-  font-family: $header-font-family;
-  font-weight: bold;
+  font-family: $global-font-primary;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -354,4 +357,11 @@ input[type="submit"],
 .archive__item-teaser {
   -webkit-transition: $global-transition;
   transition: $global-transition;
+}
+
+.text-muted {
+  color: $global-text-muted
+}
+.text-primary {
+  color: $global-text-primary
 }

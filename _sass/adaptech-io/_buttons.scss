@@ -5,93 +5,194 @@
 /*
    Default button
    ========================================================================== */
-
-.btn {
-  /* default */
-  display: inline-block;
-  margin-bottom: 0.25em;
-  padding: 0.5em 1em;
-  font-family: $sans-serif;
-  font-size: $type-size-6;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  border-width: 0;
-  border-radius: $border-radius;
-  cursor: pointer;
-
-  .icon {
-    margin-right: 0.5em;
-  }
-
-  .icon + .hidden {
-    margin-left: -0.5em; /* override for hidden text*/
-  }
-
-  /* button colors */
-  $buttoncolors:
-  (primary, $primary-color),
-  (inverse, #fff),
-  (light-outline, transparent),
-  (success, $success-color),
-  (warning, $warning-color),
-  (danger, $danger-color),
-  (info, $info-color),
-  (facebook, $facebook-color),
-  (twitter, $twitter-color),
-  (linkedin, $linkedin-color);
-
-  @each $buttoncolor, $color in $buttoncolors {
-    &--#{$buttoncolor} {
-      @include yiq-contrasted($color);
-      @if ($buttoncolor == inverse) {
-        border: 1px solid $border-color;
-      }
-      @if ($buttoncolor == light-outline) {
-        border: 1px solid #fff;
-      }
-
-      &:visited {
-        @include yiq-contrasted($color);
-      }
-
-      &:hover {
-        @include yiq-contrasted(mix(#000, $color, 20%));
-      }
-    }
-  }
-
-  /* fills width of parent container */
-  &--block {
-    display: block;
-    width: 100%;
-
-    + .btn--block {
-      margin-top: 0.25em;
-    }
-  }
-
-  /* disabled */
-  &--disabled {
-    pointer-events: none;
-    cursor: not-allowed;
-    filter: alpha(opacity=65);
-    box-shadow: none;
-    opacity: 0.65;
-  }
-
-  /* extra large button */
-  &--x-large {
-    font-size: $type-size-4;
-  }
-
-  /* large button */
-  &--large {
-    font-size: $type-size-5;
-  }
-
-  /* small button */
-  &--small {
-    font-size: $type-size-7;
-  }
+.btn-primary {
+  border-color: $global-primary-color;
+  text-transform: uppercase;
+  font-family: $global-font-primary;
+  font-weight: 700;
+  color: #fff;
+  background-color: $global-primary-color;
 }
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  border-color: $global-primary-color;
+color: #fff;
+background-color: $global-secondary-color;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  border-color: $global-primary-color;
+background-color: $global-primary-color;
+}
+
+.btn-primary .badge {
+  color: $global-primary-color;
+background-color: #fff;
+}
+
+.btn-xl {
+  padding: 20px 40px;
+  border-color: $global-primary-color;
+border-radius: 3px;
+text-transform: uppercase;
+font-family: $global-font-primary;
+font-size: 18px;
+font-weight: 700;
+color: #fff;
+background-color: $global-primary-color;
+}
+
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  border-color: $global-primary-color;
+color: #fff;
+background-color: $global-secondary-color;
+}
+
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+  background-image: none;
+}
+
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+  border-color: $global-primary-color;
+background-color: $global-primary-color;
+}
+
+.btn-xl .badge {
+  color: $global-primary-color;
+background-color: #fff;
+}
+
+//
+//.btn {
+//  /* default */
+//  display: inline-block;
+//  margin-bottom: 0.25em;
+//  padding: 0.5em 1em;
+//  font-family: $sans-serif;
+//  font-size: $type-size-6;
+//  font-weight: bold;
+//  text-align: center;
+//  text-decoration: none;
+//  border-width: 0;
+//  border-radius: $border-radius;
+//  cursor: pointer;
+//
+//  .icon {
+//    margin-right: 0.5em;
+//  }
+//
+//  .icon + .hidden {
+//    margin-left: -0.5em; /* override for hidden text*/
+//  }
+//
+//  /* button colors */
+//  $buttoncolors:
+//  (primary, $primary-color),
+//  (inverse, #fff),
+//  (light-outline, transparent),
+//  (success, $success-color),
+//  (warning, $warning-color),
+//  (danger, $danger-color),
+//  (info, $info-color),
+//  (facebook, $facebook-color),
+//  (twitter, $twitter-color),
+//  (linkedin, $linkedin-color);
+//
+//  @each $buttoncolor, $color in $buttoncolors {
+//    &--#{$buttoncolor} {
+//      @include yiq-contrasted($color);
+//      @if ($buttoncolor == inverse) {
+//        border: 1px solid $border-color;
+//      }
+//      @if ($buttoncolor == light-outline) {
+//        border: 1px solid #fff;
+//      }
+//
+//      &:visited {
+//        @include yiq-contrasted($color);
+//      }
+//
+//      &:hover {
+//        @include yiq-contrasted(mix(#000, $color, 20%));
+//      }
+//    }
+//  }
+//
+//  /* fills width of parent container */
+//  &--block {
+//    display: block;
+//    width: 100%;
+//
+//    + .btn--block {
+//      margin-top: 0.25em;
+//    }
+//  }
+//
+//  /* disabled */
+//  &--disabled {
+//    pointer-events: none;
+//    cursor: not-allowed;
+//    filter: alpha(opacity=65);
+//    box-shadow: none;
+//    opacity: 0.65;
+//  }
+//
+//  /* extra large button */
+//  &--x-large {
+//    font-size: $type-size-4;
+//  }
+//
+//  /* large button */
+//  &--large {
+//    font-size: $type-size-5;
+//  }
+//
+//  /* small button */
+//  &--small {
+//    font-size: $type-size-7;
+//  }
+//}
