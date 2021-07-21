@@ -8,5 +8,7 @@ color:
 
 # Font Families
 font:
-  primary: 'Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif'
+  primary: '"Helvetica Neue", Helvetica, Arial, sans-serif'
   secondary: '"Droid Serif", "Helvetica Neue", Helvetica,Arial,sans-serif'
+#  nav-bar: '"Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive'
+  navbar: '"Helvetica Neue", Helvetica, Arial, sans-serif'

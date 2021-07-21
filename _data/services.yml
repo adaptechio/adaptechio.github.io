@@ -1,0 +1,31 @@
+header_text: Services
+subheader_text: Core services feature entire software development lifecycle with continuous integration and long-term support.
+service_list_images_enabled: true
+service_list:
+  - header: "Design & Development"
+    image: "fa-laptop"
+    summary: We believe every customer has a problem in mind they want to solve, we work with the client to ensure the solution developed is effective, versatile, and of course cutting edge.
+    bullets:
+      - Create survivability and vulnerability strategies
+      - Analysis of alternatives
+
+  - header: "Security"
+    image: "fa-lock"
+    summary: Security is a top priority of AdapTech, we build security from the ground up with our DevOps Infrastructure. This ensures no policy is left behind, and newly discovered vulnerabilties are easily patched across the board.
+    bullets:
+      - Zero Trust
+      - Cloud Security Across Environments
+
+  - header: "Development Operations"
+    image: "fa-cogs"
+    summary: "DevOps has been established as a core necesseity of any successful team, its required to accelerate development teams, we write beautiful Infrastructure as Code (IAC) to help automate everything."
+    bullets:
+      - GitOps
+      - NoOps Environments for Developers
+
+  - header: "Management"
+    image: "fa-users"
+    summary: "We believe projects need loving support from start to finish, to help this we integrate all our skills and services to bring a startup idea to a fully realized application."
+    bullets:
+      - Agile team collaboration
+      - Transparent communication throughout the development lifecycle
