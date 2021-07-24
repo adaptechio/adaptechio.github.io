@@ -755,6 +755,10 @@ section#contact .text-danger {
     color: #e74c3c;
 }
 
+section#contact .text-white {
+    color: #FFFFFF;
+}
+
 footer {
     padding: 25px 0;
     text-align: center;
