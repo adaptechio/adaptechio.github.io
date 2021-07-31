@@ -1,0 +1,15 @@
+header_text: About Us
+sub_header_text: From __humble__ beginnings to a **strong** future.
+
+history: 
+  - image: img/about/3.jpg
+    date: December 2021
+    header: Transition to Full Service
+    content: Foo
+  - image: img/about/4.jpg
+    date: April 2, 2021
+    header: AdapTech Found Virtually
+    content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+    inverted: true
+  - singular: true
+    
