@@ -14,6 +14,15 @@ Local Development Instructions
 3. Run ```bundler install``` to install necessary ruby/gem dependencies
 4. Run ```bundle exec jekyll serve``` to serve client
 
+Docker
+====================
+- Build
+```docker-compose build```
+
+- Run
+```docker-compose up```
+ctrl-c to quit and shutdown container
+
 Agency Jekyll theme
 ====================
 
