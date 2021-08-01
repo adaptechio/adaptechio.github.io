@@ -7,23 +7,51 @@
                 <h3 class="section-subheading text-muted">{{.site.data.services.subheader_text}}</h3>
             </div>
         </div>
-        <div class="row text-center">
+        <div class="row justify-content-center">
             {% for service in site.data.services.service_list %}
-            <div class="card m-1 col">
-                {% if .site.data.services.service_list_images_enabled %}
-                <span class="fa-stack fa-4x card-img-top w-100">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa {{service.image}} fa-stack-1x fa-inverse"></i>
-                </span>
-                {% endif %}
-                
-                <div class="card-body">
-                    <div class="row"><h5 class="card-title" style="height: 50px;">{{service.header}}</h5></div>                    
-                    <div class="row"><p class="card-text" style="height: 200px;">{{service.summary}}</p></div>
-                    <div class="row"><a href="#" class="btn btn-primary">Details</a></div>
-                    
-                </div>
+            <div class="col-3">
+                <div class="card">
+                    {% if .site.data.services.service_list_images_enabled %}
+                    <div class="row mt-2">
+                        <span class="fa-stack fa-4x card-img-top w-100">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa {{service.image}} fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                    {% endif %}
+    
+                    <div class="card-body">
+                        <div class="row" style="height: 50px;">
+                            <h5 class="card-title text-center m-auto">{{service.header}}</h5>
+                        </div>
+                        <div class="row">
+                            <p class="card-text text-center " style="height: 175px;">{{service.summary}}</p>
+                        </div>
+                        <div class="row mb-2">
+                            <button class="btn btn-primary text-center col-sm-6 mx-auto" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#cardDetailsCollapse{{forloop.index}}" aria-expanded="false"
+                                aria-controls="cardDetailsCollapse{{forloop.index}}">
+                                Details
+                            </button>
 
+                        </div>
+                        <div class="row">
+                            <div class="collapse" id="cardDetailsCollapse{{forloop.index}}">
+                                <div>
+                                    <ul class="mt-2">
+                                        {% for bullet in service.bullets %}
+                                            <li>{{bullet}}</li>
+                                        {% endfor %}
+                                    </ul>
+        
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+                
             </div>
             {% endfor %}
         </div>
