@@ -9,23 +9,23 @@
             </div>
             <div class="row">
                 {% for person in site.data.team.people %}
-                <div class="card m-1 col">
-                    <div id="team-member-{{person.name | slugify}}" class="row team-member team-stack">
+                <div class="card border-0 m-1 col">
+                    <div id="team-member-{{person.name | slugify}}" class="card-body">
                             {% if person.pic %}
-                            <img src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" class="{{ person.classes | default: 'img-thumbnail team-image team-member' }}" alt="">
+                            <img src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" class="{{ person.classes | default: 'card-img-top circle team-member' }}" alt="">
                             {% else %}
-                            <i class="fa fa-user"></i>
+                            <i class="card-img-top circle team-member fa fa-user"></i>
                             {% endif %}
 
-                        <div class="row">
-                            <h4>{{ person.name }}</h4>
-                            <p class="text-muted">{{ person.position }}</p>
+                        <div class="card-title col">
+                            <h4 class="text-center">{{ person.name }}</h4>
+                            <p class="text-center text-muted">{{ person.position }}</p>
                         </div>
-                        <div class="row">
-                            <ul class="col list-inline social-buttons">
+                        <div class="card-text col">
+                            <ul class="list-group list-group-horizontal col list-inline social-buttons">
                                 {% for network in person.social %}
-                                <li class="col">
-                                    <a href="{{ network.url }}">
+                                <li class="list-group-item border-0 col">
+                                    <a class="text-center" href="{{ network.url }}">
                                         <i class="fa fa-{{ network.title }}"></i>
                                     </a>
                                 </li>
@@ -37,7 +37,7 @@
                 {% endfor %}
             </div>
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
+                <div class="text-center">
                     <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
                 </div>
             </div>

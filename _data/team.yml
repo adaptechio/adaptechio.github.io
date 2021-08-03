@@ -2,7 +2,7 @@ header: Our Amazing Team
 #subheader:
 people:
   - name: Benjamin Smith
-    pic: ben5
+    pic: ben6
     position: Chief Executive Officer
     social:
       - title: github
@@ -24,7 +24,7 @@ people:
         url: https://www.linkedin.com/in/mffaruq/
 
   - name: Thomas Nguyen
-    pic: thomas
+    pic: thomas2
     position: Chief Technology Officer & Chief Information Officer
     social:
       - title: github
