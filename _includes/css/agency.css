@@ -666,6 +666,17 @@ section h3.section-subheading {
     }
 }
 
+/*.team-image {*/
+/*    width: 282px;*/
+/*    height: 316px;*/
+/*}*/
+.team-stack {
+    position: relative;
+    display: inline-block;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
 .team-member {
     margin-bottom: 50px;
     text-align: center;
@@ -674,6 +685,8 @@ section h3.section-subheading {
 .team-member img {
     margin: 0 auto;
     border: 7px solid #fff;
+    border-radius: 50%;
+    width: 100%;
 }
 
 .team-member h4 {
@@ -796,6 +809,8 @@ ul.social-buttons li a {
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
 }
 
 ul.social-buttons li a:hover,
@@ -965,4 +980,9 @@ body {
     background-color: currentColor;
     border-radius: 50%;
 }
+
+/*.circle {*/
+/*}*/
+
+/*.*/
 

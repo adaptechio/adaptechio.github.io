@@ -9,28 +9,29 @@
             </div>
             <div class="row">
                 {% for person in site.data.team.people %}
-                <div class="col-sm-3">
-                    <div class="team-member">
-                    <span class="fa-stack fa-4x card-img-top w-100">
-                        {% if person.pic %}
-                        <img src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" class="{{ person.classes | default: 'img-thumbnail' }}" alt="">
-                        {% else %}
-                        <i class="fa fa-user"></i>
-                        {% endif %}
+                <div class="card m-1 col">
+                    <div id="team-member-{{person.name | slugify}}" class="row team-member team-stack">
+                            {% if person.pic %}
+                            <img src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" class="{{ person.classes | default: 'img-thumbnail team-image team-member' }}" alt="">
+                            {% else %}
+                            <i class="fa fa-user"></i>
+                            {% endif %}
 
-                        <h4>{{ person.name }}</h4>
-                        <p class="text-muted">{{ person.position }}</p>
-                        <ul class="list-inline social-buttons">
-                            {% for network in person.social %}
-                            <li>
-                                <a href="{{ network.url }}">
-                                    <i class="fa fa-{{ network.title }}"></i>
-                                </a>
-                            </li>
-                            {% endfor %}
-
-                        </ul>
-                    </span>
+                        <div class="row">
+                            <h4>{{ person.name }}</h4>
+                            <p class="text-muted">{{ person.position }}</p>
+                        </div>
+                        <div class="row">
+                            <ul class="col list-inline social-buttons">
+                                {% for network in person.social %}
+                                <li class="col">
+                                    <a href="{{ network.url }}">
+                                        <i class="fa fa-{{ network.title }}"></i>
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 {% endfor %}
