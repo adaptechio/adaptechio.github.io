@@ -5,14 +5,12 @@ history:
   - image: img/about/3.jpg
     date: December 2021
     header: Transition to Full Service
-    content: Foo
+    content: AdapTech has begun gaining traction and established itself in the IT Industry.
   - image: img/about/4.jpg
     date: April 2, 2021
     header: AdapTech Found Virtually
-    content: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!
+    content: AdapTech was founded virtually, bringing together ideas from across the United States to create a shared vision of the future in technology.
     inverted: true
-  - singular_text: |
-      true
-      or not
+  - singular_text: Idea for AdapTech is created # Adaptech Founded 2021
     
     

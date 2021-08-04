@@ -924,6 +924,10 @@ body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
 }
 
+.singular {
+    word-break: break-word;
+}
+
 /* Animation */
 /*body {*/
 /*    display: flex;*/
