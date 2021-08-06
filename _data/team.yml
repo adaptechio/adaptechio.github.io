@@ -3,7 +3,9 @@ header: Our Amazing Team
 people:
   - name: Benjamin Smith
     pic: ben
-    position: Chief Executive Officer
+    positions:
+      - Chief Executive Officer
+      - ""
     social:
       - title: github
         url: https://github.com/Benbentwo/
@@ -12,21 +14,27 @@ people:
 
   - name: Travis Nguyen
     pic: travis
-    position: Chief Operating Officer
+    positions:
+      - Chief Operating Officer
+      - ""
     social:
       - title: linkedin
         url: https://www.linkedin.com/in/travis-nguyen-2140b2143/
 
   - name: Mohammed Faruq
     pic: mohammed
-    position: Chief Security Officer & Chief Information Security Officer
+    positions:
+      - Chief Security Officer
+      - Chief Information Security Officer
     social:
       - title: linkedin
         url: https://www.linkedin.com/in/mffaruq/
 
   - name: Thomas Nguyen
     pic: thomas
-    position: Chief Technology Officer & Chief Information Officer
+    positions:
+      - Chief Technology Officer
+      - Chief Information Officer
     social:
       - title: github
         url: https://github.com/thomasnguyen95/
