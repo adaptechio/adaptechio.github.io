@@ -914,10 +914,11 @@ ul.social-buttons li a:active {
     background: #{{ site.data.template.color.primary }};
 }
 
-::selection {
-    text-shadow: none;
-    background: #{{ site.data.template.color.primary }};
-}
+/* Changes background selection color */
+/*::selection {*/
+/*    text-shadow: none;*/
+/*    background: black;*/
+/*}*/
 
 img::selection {
     background: 0 0;
@@ -929,6 +930,10 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
+}
+
+.singular {
+    word-break: break-word;
 }
 
 /* Animation */

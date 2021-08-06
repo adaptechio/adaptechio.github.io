@@ -18,6 +18,7 @@ people:
         url: https://www.linkedin.com/in/travis-nguyen-2140b2143/
 
   - name: Mohammed Faruq
+    pic: mohammed
     position: Chief Security Officer & Chief Information Security Officer
     social:
       - title: linkedin
@@ -32,3 +33,4 @@ people:
       - title: linkedin
         url: https://www.linkedin.com/in/thomas-nguyen-/
 
+bottom_message: We're pleased to meet you!
