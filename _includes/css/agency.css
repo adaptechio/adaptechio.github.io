@@ -68,9 +68,9 @@ a.active {
     outline: 0;
 }
 
-a {
-    color: #{{ site.data.template.color.primary }};
-}
+/*a {*/
+/*    color: #{{ site.data.template.color.primary }};*/
+/*}*/
 
 a:hover,
 a:focus,

@@ -10,10 +10,10 @@
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 {% for person in site.data.team.people %}
                 <div class="col"> <!-- Col Handles Shrinking and resizing card grig-->
-                    <div class="card border-0 m-1 h-100">
+                    <div class="card bg-transparent border-0 m-1 h-100">
                         <img class="{{ person.classes | default: 'card-img-top circle mb-md-auto' }}" src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" alt="">
                         <div class="card-body"></div>
-                        <div class="card-footer d-flex flex-column">
+                        <div class="card-footer bg-transparent d-flex flex-column border-0">
                             <div class="card-title">
                                 <h4 class="text-center">{{ person.name }}</h4>
                             </div>
@@ -29,7 +29,7 @@
 <!--                        <div class="card-footer bg-white border-0">-->
                             <ul class="list-group list-group-horizontal col list-inline social-buttons">
                                 {% for network in person.social %}
-                                <li class="list-group-item border-0 col">
+                                <li class="bg-transparent list-group-item border-0 col">
                                     <a class="text-center" href="{{ network.url }}">
                                         <i class="fa fa-{{ network.title }}"></i>
                                     </a>
