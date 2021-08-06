@@ -776,6 +776,14 @@ section#contact .text-white {
     color: #FFFFFF;
 }
 
+section#contact .text-align-left {
+    text-align: left;
+}
+
+section#contact .text-align-right {
+    text-align: right;
+}
+
 footer {
     padding: 25px 0;
     text-align: center;

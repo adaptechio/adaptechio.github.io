@@ -1,3 +1,12 @@
 header_text: Contact Us
-subheader_text: Standard, non-emergency requests can be submitted to info@adaptech.io.
+subheader_text: Additional questions or standard, non-emergency requests for information? Contact us!
 subheader_text_note: Email requests are only processed Monday through Friday from 8 a.m. - 5 p.m. ET.
+poc_list:
+  - key: Email
+    value: info@adaptech.io
+
+  - key: Phone
+    value: 1-800-111-1111
+
+  - key: Mailing Address
+    value: 14703 Flagler Ct <br > Centreville, VA 20120
