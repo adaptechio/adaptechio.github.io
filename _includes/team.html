@@ -7,21 +7,20 @@
                     <h3 class="section-subheading text-muted">{{.site.data.team.subheader}}</h3>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
                 {% for person in site.data.team.people %}
-                <div class="card border-0 m-1 col">
-                    <div id="team-member-{{person.name | slugify}}" class="card-body">
-                            {% if person.pic %}
-                            <img src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" class="{{ person.classes | default: 'card-img-top circle team-member' }}" alt="">
-                            {% else %}
-                            <i class="card-img-top circle team-member fa fa-user"></i>
-                            {% endif %}
-
-                        <div class="card-title col">
-                            <h4 class="text-center">{{ person.name }}</h4>
-                            <p class="text-center text-muted">{{ person.position }}</p>
+                <div class="col">
+                    <div class="card border-0 m-1 h-100">
+                        <div id="team-member-{{person.name | slugify}}" class="card-body d-flex flex-column">
+                                <img src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" class="{{ person.classes | default: 'card-img-top circle team-member' }}" alt="">
+                            <div class="card-title">
+                                <h4 class="text-center">{{ person.name }}</h4>
+                            </div>
+                            <div class="card-subtitle">
+                                <p class="text-center text-muted">{{ person.position }}</p>
+                            </div>
                         </div>
-                        <div class="card-text col">
+                        <div class="card-footer bg-white border-0">
                             <ul class="list-group list-group-horizontal col list-inline social-buttons">
                                 {% for network in person.social %}
                                 <li class="list-group-item border-0 col">
@@ -38,6 +37,7 @@
             </div>
             <div class="row">
                 <div class="text-center">
+                    <hr>
                     <p class="large text-muted">{{.site.data.team.bottom_message}}</p>
                 </div>
             </div>

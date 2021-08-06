@@ -1,6 +1,6 @@
 header_text: Contact Us
-subheader_text: Additional questions or standard, non-emergency requests for information? Contact us!
-subheader_text_note: Email requests are only processed Monday through Friday from 8 a.m. - 5 p.m. ET.
+subheader_text: Want to learn more?
+subheader_text_note: Contact us!
 poc_list:
   - key: Email
     value: info@adaptech.io
