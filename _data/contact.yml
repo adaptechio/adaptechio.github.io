@@ -5,8 +5,5 @@ poc_list:
   - key: Email
     value: info@adaptech.io
 
-  - key: Phone
-    value: 1-800-111-1111
-
   - key: Mailing Address
     value: 14703 Flagler Ct <br > Centreville, VA 20120
