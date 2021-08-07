@@ -10,7 +10,7 @@
         <div class="row justify-content-center">
             {% for service in site.data.services.service_list %}
             <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-12 col-sm-12 col-xs-12 mb-2">
-                <div class="card h-100">
+                <div class="card">
                     {% if site.data.services.service_list_images_enabled %}
                     <div class="row mt-2">
                         <span class="fa-stack fa-4x card-img-top w-100">
@@ -26,11 +26,9 @@
                         </div>
                         <div class="row my-2">
                             <div>
-                                <p class="card-text text-center service-summary">{{service.summary}}</p>
+                                <p class="card-text text-center service-summary" style="height: 168px;">{{service.summary}}</p>
                             </div>
                         </div>
-                    </div> <!-- card body -->
-                    <div class="card-footer bg-transparent border-0">
                         <div class="row my-2">
                             <button class="btn btn-primary text-center col-sm-6 mx-auto" type="button"
                                 data-bs-toggle="collapse" data-bs-target="#cardDetailsCollapse{{forloop.index}}"
@@ -50,7 +48,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> <!-- card body -->
 
                 </div> <!-- card-->
 
