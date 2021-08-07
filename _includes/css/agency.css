@@ -784,6 +784,11 @@ section#contact .text-align-right {
     text-align: right;
 }
 
+section#contact .contact-card-container {
+    background: rgba(0, 0, 0, 0.50);
+    width:380px;
+}
+
 footer {
     padding: 25px 0;
     text-align: center;
