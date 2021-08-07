@@ -1,5 +1,4 @@
 url: https://adaptechio.github.io/
-#baseurl: /
 
 # Site settings
 title: AdapTech LLC
@@ -7,51 +6,10 @@ email: chameleon@adaptech.io
 description: "This is an awesome description for AdapTech LLC."
 version: "v0.1.0"
 
-
-# Team names, titles and social links
-people:
-- name: Benjamin Smith
-  pic: BenSmith
-  position: Chief Executive Officer
-  social:
-    - title: github
-      url: https://github.com/Benbentwo/
-    - title: linkedin
-      url: https://www.linkedin.com/in/benjamin-smith-15378010a/
-
-- name: Travis Nguyen
-  pic: 2
-  position: Chief Operating Officer
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/travis-nguyen-2140b2143/
-
-- name: Mohammed Faruq
-  pic: 3
-  position: Chief Security Officer & Chief Information Security Officer 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/mffaruq/
-
-- name: Thomas Nguyen
-  pic: 1
-  position: Chief Technology Officer & Chief Information Officer 
-  social:
-    - title: linkedin
-      url: https://www.linkedin.com/in/thomas-nguyen-/
-    - title: github
-      url: https://github.com/thomasnguyen95/
-      
-
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: github
     url: http://github.com/adaptechio
-
-# Postal address (add as many lines as necessary)
-# address:
-#   - line: 3481 Melrose Place
-#   - line: Beverly Hills, CA 90210
 
 # Build settings
 markdown: kramdown

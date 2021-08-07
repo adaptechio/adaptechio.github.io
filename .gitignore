@@ -1,5 +1,5 @@
 _site
-
+.idea/
 # Docker Build uses gem install <foo> rather than a gemfile.
 Gemfile.lock
 #Gemfile
