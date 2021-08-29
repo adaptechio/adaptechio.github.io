@@ -206,6 +206,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default {
     border-color: transparent;
     background-color: #222;
+    background-image: none;
 }
 
 .navbar-default .navbar-brand {
@@ -304,7 +305,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    /*background-image: url('{{ site.baseurl }}/img/header-bg.jpg');*/
+    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
