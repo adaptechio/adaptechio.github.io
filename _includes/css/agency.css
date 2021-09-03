@@ -287,7 +287,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
+    background-image: url('{{ site.baseurl }}/img/{{ site.data.images.title_background_image }}');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -767,7 +767,7 @@ section#contact .text-align-right {
     text-align: right;
 }
 
-section#contact .contact-card-container {
+section .contact-card-container {
     background: rgba(0, 0, 0, 0.50);
     width:380px;
 }
@@ -796,6 +796,12 @@ ul.social-buttons {
     margin-bottom: 0;
 }
 
+.flip-box-back {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+}
 ul.social-buttons li a {
     display: block;
     width: 40px;
@@ -995,7 +1001,7 @@ body {
     height: 200px;
     /* perspective: 1000px; Remove this if you don't want the 3D effect */
   }
-  
+
   /* This container is needed to position the front and back side */
   .flip-box-inner {
     position: relative;
@@ -1005,12 +1011,12 @@ body {
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
-  
+
   /* Do an horizontal flip when you move the mouse over the flip box container */
   .flip-box:hover .flip-box-inner {
     transform: rotateY(180deg);
   }
-  
+
   /* Position the front and back side */
   .flip-box-front, .flip-box-back {
     position: absolute;
@@ -1020,7 +1026,7 @@ body {
     backface-visibility: hidden;
     border-radius: 8px;
   }
-  
+
   /* Style the front side */
   .flip-box-front {
     background-color: #{{ site.data.template.color.primary }};
