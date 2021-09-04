@@ -34,8 +34,11 @@ body {
 }
 
 p {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.75;
+}
+p.card-text {
+    font-size: 14px;
 }
 
 p.large {
@@ -280,8 +283,11 @@ fieldset[disabled] .btn-xl.active {
         font-size: 1.5em;
     }
 }
-
-header {
+header.header-image::before {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* msie */
+}
+header.header-image{
     position: relative;
     z-index: 1;
     text-align: center;
@@ -294,6 +300,10 @@ header {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+img.header-image {
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* msie */
 }
 
 header .intro-text {
@@ -772,6 +782,11 @@ section .contact-card-container {
     width:380px;
 }
 
+.header-box {
+    background: rgba(0, 0, 0, 0.80);
+    width:720px;
+}
+
 footer {
     padding: 25px 0;
     text-align: center;
@@ -999,7 +1014,7 @@ body {
     background-color: transparent;
     /* width: 300px; */
     height: 200px;
-    /* perspective: 1000px; Remove this if you don't want the 3D effect */
+    perspective: 1000px; /*Remove this if you don't want the 3D effect */
   }
 
   /* This container is needed to position the front and back side */

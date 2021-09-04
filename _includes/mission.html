@@ -4,10 +4,14 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">{{site.data.mission.header_text}}</h2>
-                <h3 class="section-subheading text-muted">{{site.data.mission.sub_header_text }}</h3>
+                <p class="section-subheading text-muted mb-5">{{site.data.mission.summary }}</p>
+                <hr>
+                <h3>{{site.data.mission.mission_statement }}</h3>
+                <hr>
             </div>
         </div>
-        <div class="row text-center justify-content-center">
+
+        <div class="mt-5 row text-center justify-content-center">
             <h2 class="section-heading">{{site.data.mission.value_header}}</h2>
             {% for value in site.data.mission.value_list %}
             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 my-1">
@@ -20,13 +24,9 @@
                             
                         </div>
                         <div class="flip-box-back h-100 w-100">
-
-                           <p>
+                            <div class="justify-content-center m-5">
                                {{ value.description }}
-                           </p>
-
-<!--                            <p class="section-subheading text-muted align-middle">{{ value.description }}</p>-->
-<!--                            <p class="text-center">{{ value.description }}</p>-->
+                            </div>
                         </div>
                     </div>
                 </div>
