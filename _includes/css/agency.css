@@ -1063,3 +1063,21 @@ body {
     color: black;
     transform: rotateY(180deg);
   }
+
+
+#team-pill-container button {
+    width: 200px;
+}
+
+section#team img#img-team {
+    width: 100%;
+}
+
+section#team .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #{{ site.data.template.color.primary }};
+}
+
+section#team .nav-link {
+    color: #{{ site.data.template.color.primary }};
+}

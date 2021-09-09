@@ -1,80 +1,60 @@
-<section>
-<div class="container">
+<section id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">{{site.data.team.header_text}}</h2>
+                <h3 class="section-subheading text-muted">{{site.data.team.subheader_text}}</h3>
+            </div>
+        </div>
+        <div class="d-flex align-items-start">
+            <div id="team-pill-container" class="nav flex-column me-3 nav-pills" id="v-pills-tab" role="tablist"
+                aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-team-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-team" type="button" role="tab" aria-controls="v-pills-team"
+                    aria-selected="true">Team</button>
+                {% for person in site.data.team.people %}
+                <button class="nav-link" id="v-pills-{{ person.name | slugify }}-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-{{ person.name | slugify }}" type="button" role="tab"
+                    aria-controls="v-pills-{{ person.name | slugify }}" aria-selected="false">{{ person.name }}</button>
+                {% endfor %}
+            </div>
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane text-center fade show active" id="v-pills-team" role="tabpanel"
+                    aria-labelledby="v-pills-team-tab">
+                    <div class="card border-0 m-1">
+                        <img id="img-team" class="card-img-top rounded mb-md-auto" src="img/team/team.jpg"
+                            alt="team picture">
+                        <div class="card-body">
+                            <p class="card-text">
+                                {{site.data.team.team_text}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% for person in site.data.team.people %}
+                <div class="tab-pane text-center fade" id="v-pills-{{person.name | slugify}}" role="tabpanel"
+                    aria-labelledby="v-pills-{{person.name | slugify }}-tab">
+                    <div class="card border-0 m-1">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img id="img-member" class="card-img-top rounded mb-md-auto"
+                                src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}"
+                                alt="{{person.name}} picture">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title">{{person.member_card_title}}</h4>
+                                    <p class="card-text"><small class="text-muted">{{person.positions | array_to_sentence_string }}</small></p>
+                                    <p class="card-text">{{person.member_card_text}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-<div class="d-flex align-items-start">
-    <div class="nav flex-column me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-        <button class="btn btn-secondary nav-link active" id="v-pills-team-tab" data-bs-toggle="pill" data-bs-target="#v-pills-team" type="button" role="tab" aria-controls="v-pills-team" aria-selected="true">Team</button>
-        {% for person in site.data.team.people %}
-        <button class="btn btn-secondary nav-link" id="v-pills-{{ person.name | slugify }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ person.name | slugify }}" type="button" role="tab" aria-controls="v-pills-{{ person.name | slugify }}" aria-selected="false">{{ person.name }}</button>
-        {% endfor %}
-    </div>
-    <div class="tab-content" id="v-pills-tabContent">
-        <div class="tab-pane text-center fade show active" id="v-pills-team" role="tabpanel" aria-labelledby="v-pills-team-tab">
-                <img class="card-img-top rounded mb-md-auto" src="img/team/team.jpg" alt="team picture">
-<!--            <button type="button" class="btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">-->
-<!--            </button>-->
+                </div>
+
+                {% endfor %}
+            </div>
         </div>
-        {% for person in site.data.team.people %}
-        <div class="tab-pane text-center fade" id="v-pills-{{person.name | slugify}}" role="tabpanel" aria-labelledby="v-pills-{{person.name | slugify }}-tab">
-                <img class="card-img-top rounded mb-md-auto" src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" alt="team picture">
-<!--            <button type="button" class="btn" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">-->
-<!--            </button>-->
-        </div>
-        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
-        {% endfor %}
     </div>
-</div>
-</div>
 </section>
-<!--</section>-->
-<!-- Team Section -->
-<!--    <section id="team2" class="bg-light-gray">-->
-<!--        <div class="container">-->
-<!--            <div class="row">-->
-<!--                <div class="col-lg-12 text-center">-->
-<!--                    <h2 class="section-heading">{{.site.data.team.header}}</h2>-->
-<!--                    <h3 class="section-subheading text-muted">{{.site.data.team.subheader}}</h3>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="row row-cols-1 row-cols-md-4 g-4">-->
-<!--                {% for person in site.data.team.people %}-->
-<!--                <div class="col"> &lt;!&ndash; Col Handles Shrinking and resizing card grig&ndash;&gt;-->
-<!--                    <div class="card bg-transparent border-0 m-1 h-100">-->
-<!--                        <img class="{{ person.classes | default: 'card-img-top circle mb-md-auto' }}" src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" alt="">-->
-<!--                        <div class="card-body"></div>-->
-<!--                        <div class="card-footer bg-transparent d-flex flex-column border-0">-->
-<!--                            <div class="card-title">-->
-<!--                                <h4 class="text-center">{{ person.name }}</h4>-->
-<!--                            </div>-->
-<!--                            <div class="card-subtitle">-->
-<!--                                <ul class="text-center list-inline">-->
-<!--                                    {% for position in person.positions %}-->
-<!--                                    <li class="list-inline-item w-100">{{ position }}</li>-->
-<!--                                    {% endfor %}-->
-<!--                                </ul>-->
-<!--&lt;!&ndash;                                <p class="text-center text-muted">{{ person.position }}</p>&ndash;&gt;-->
-<!--                            </div>-->
-<!--&lt;!&ndash;                        </div>&ndash;&gt;-->
-<!--&lt;!&ndash;                        <div class="card-footer bg-white border-0">&ndash;&gt;-->
-<!--                            <ul class="list-group list-group-horizontal col list-inline social-buttons">-->
-<!--                                {% for network in person.social %}-->
-<!--                                <li class="bg-transparent list-group-item border-0 col">-->
-<!--                                    <a class="text-center" href="{{ network.url }}">-->
-<!--                                        <i class="fa fa-{{ network.title }}"></i>-->
-<!--                                    </a>-->
-<!--                                </li>-->
-<!--                                {% endfor %}-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                {% endfor %}-->
-<!--            </div>-->
-<!--            <div class="row">-->
-<!--                <div class="text-center">-->
-<!--                    <hr>-->
-<!--                    <p class="large text-muted">{{.site.data.team.bottom_message}}</p>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </section>-->
