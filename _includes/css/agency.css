@@ -1070,7 +1070,8 @@ body {
 }
 
 section#team img#img-team {
-    width: 100%;
+    height: auto;
+    max-width: 75%;
 }
 
 section#team .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
@@ -1080,4 +1081,10 @@ section#team .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
 
 section#team .nav-link {
     color: #{{ site.data.template.color.primary }};
+}
+
+section#team .tab-content {
+    border: 1px solid rgba(0,0,0,.125);
+    border-top-style: none!important;
+
 }
