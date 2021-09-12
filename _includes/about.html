@@ -15,7 +15,7 @@
                         {% assign inverted-class = "" %}
                         {% if inverted %}{% assign inverted-class = "timeline-inverted" %}{% endif %}
                         <li class="{{inverted-class}}">
-                            <div class="timeline-image">
+                            <div class="timeline-image shadow">
                             {% unless time_section.singular_text %}
                                 <img class="card-img-top circle" src="{{time_section.image}}" alt="">
                             </div>
