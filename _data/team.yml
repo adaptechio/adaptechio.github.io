@@ -12,7 +12,7 @@ people:
       - title: linkedin
         url: https://www.linkedin.com/in/benjamin-smith-15378010a/
     member_card_title: Title
-    member_card_text: I'm on a new level!
+    member_card_text: A Physics graduate from Virginia Tech with a passion for automation. Ben brings experience from developing web applications for the healthcare industry, to leading the DevOps transformation within the Department of Veteran’s Affairs. Ben then mastered Cloud Security while providing DevOps solutions for a variety of tech startups. With this experience Ben will lead AdapTech to be a culturally adept and technically savvy disrupter of the Federal IT industry. 
 
   - name: Travis Nguyen
     pic: travis
@@ -22,7 +22,7 @@ people:
       - title: linkedin
         url: https://www.linkedin.com/in/travis-nguyen-2140b2143/
     member_card_title: Title
-    member_card_text: I'm on a new level!
+    member_card_text: An Information Technology graduate from George Mason University with a desire to work in Cyber Security. Travis went on to obtain his master’s degree in Cybersecurity Technology from University of Maryland Global Campus. As a contractor that has worked on numerous projects, Travis hopes to bring his flexibility and knowledge to AdapTech. Travis has experience as an information assurance specialist working on multiple corporation certifications such as ISO (International Organization for Standardization) 27001, CMMI (Capability Maturity Model Integration), and CMMC (Cybersecurity Maturity Model Certification). Now, Travis has expanded his scope and transitioned to a solution-oriented role, providing his expertise on solution development and pilot programs to the DoS (Department of State). Travis will use this experience to help AdapTech lead the forefront of technology by providing our clients battle-tested solutions and services. 
 
   - name: Mohammed Faruq
     pic: mohammed
@@ -33,7 +33,7 @@ people:
       - title: linkedin
         url: https://www.linkedin.com/in/mffaruq/
     member_card_title: Title
-    member_card_text: I'm on a new level! \n I'm on a new level!I'm on a new level!I'm on a new level!I'm on a new level!I'm on a new level!I'm on a new level!I'm on a new level!I'm on a new level!
+    member_card_text: Mohammed started his cybersecurity career after graduating from George Mason University with a degree in Information Technology. He has experience consulting government clients in implementing and becoming compliant with Risk Management Framework (RMF), Cybersecurity Maturity Model Compliance (CMMC), and NIST frameworks. With his extensive knowledge in government compliance, Mohammed quickly became acquainted with implementing security solutions like Commercial Solutions for Classified Program (CSfC) to allow the use of commercial solutions for government needs. Along with his experience, Mohammed is DoD 8570 IAT Level II and IAM Level I certified. Mohammed will use his experience to make sure AdapTech meets government compliance and requirements.
 
   - name: Thomas Nguyen
     pic: thomas
@@ -46,6 +46,6 @@ people:
       - title: linkedin
         url: https://www.linkedin.com/in/thomas-nguyen-/
     member_card_title: Title
-    member_card_text: I'm on a new level!
+    member_card_text: Thomas graduated from Virginia Tech with a bachelor’s degree in Computer Science. His knowledge of system and microservices architecture, development, and sustainment on containers and integration with Amazon Web Services (AWS) nurtures optimize systems. Thomas is experienced in developing features on frontend and backend, administering/securing systems with vulnerability scans and updates, and migrating both personal health information (PHI) and non-PHI data. Thomas understands delivering quality releases with proper version control integrating with multiple dependencies and APIs. He applies his previous knowledge from maintaining Department of Defense (DoD) subnautical systems, developing and maintaining Department of Veteran Affairs (DoVA) health systems, and modernizing Centers for Disease Control and Prevention (CDC) vaccination system towards contemporary systems and services to empower users to solve bigger problems. 
 
 bottom_message: We're pleased to meet you!
