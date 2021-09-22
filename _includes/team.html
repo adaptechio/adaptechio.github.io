@@ -31,11 +31,13 @@
                                 <div>
                                     <img id="img-team" class="card-img-top rounded mb-md-auto" src="img/team/team.jpg"
                                         alt="team picture">
-                                    <!-- <div class="card-body">
+                                    {% if site.data.team.team_text_enabled %}
+                                        <div class="card-body">
                                         <p class="card-text">
                                             {{site.data.team.team_text}}
                                         </p>
-                                    </div> -->
+                                    </div>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
@@ -56,6 +58,26 @@
                                         <p class="card-text"><small class="text-muted">{{person.positions |
                                                 array_to_sentence_string }}</small></p>
                                         <p class="card-text">{{person.member_card_text}}</p>
+                                        <br>
+                                        <ul class="container list-group list-group-horizontal fa-ul">
+                                            {% for badge in person.badges %}
+                                            <li class="col-{{ 12 | divided_by: person.badges.size }} list-inline-item">
+                                                <i class="{{ badge.icon }} fa-5x"></i>
+                                                <p>{{badge.text}}</p>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
+                                        <br>
+                                        <ul class="container list-group list-group-horizontal fa-ul">
+                                            {% for social in person.social %}
+                                            <li class="col-{{ 12 | divided_by: person.social.size }} list-inline-item">
+                                                <a href="{{social.url}}">
+                                                    <i class="{{ social.icon }} fa-3x"></i>
+                                                    <p>{{social.text}}</p>
+                                                </a>
+                                            </li>
+                                            {% endfor %}
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
