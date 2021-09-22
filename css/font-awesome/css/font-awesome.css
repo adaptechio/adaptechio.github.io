@@ -163,6 +163,7 @@
   vertical-align: middle;
 }
 .fa-stack-1x,
+.fa-stack-5x,
 .fa-stack-2x {
   position: absolute;
   left: 0;
@@ -174,6 +175,9 @@
 }
 .fa-stack-2x {
   font-size: 2em;
+}
+.fa-stack-5x {
+  font-size: 5em;
 }
 .fa-inverse {
   color: #ffffff;

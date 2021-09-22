@@ -1,18 +1,27 @@
-header_text: Our Amazing Team
-#subheader_text:
-team_text: We da best!
+header_text: Leadership
+team_text: It's nice to meet you!
+team_text_enabled: false
 people:
   - name: Benjamin Smith
     pic: ben
     positions:
       - Chief Executive Officer
+    badges:
+      - icon: "fa fa-users"
+        text: Leadership
+      - icon: "fa fa-terminal"
+        text: Technical Expertise
+      - icon: "fa fa-shield"
+        text: Zero-Trust Security
     social:
-      - title: github
+      - text: Github
+        icon: "fa fa-github"
         url: https://github.com/Benbentwo/
-      - title: linkedin
+      - text: LinkedIn
+        icon: "fa fa-linkedin-square"
         url: https://www.linkedin.com/in/benjamin-smith-15378010a/
-    member_card_title: Title
-    member_card_text: A Physics graduate from Virginia Tech with a passion for automation. Ben brings experience from developing web applications for the healthcare industry, to leading the DevOps transformation within the Department of Veteran’s Affairs. Ben then mastered Cloud Security while providing DevOps solutions for a variety of tech startups. With this experience Ben will lead AdapTech to be a culturally adept and technically savvy disrupter of the Federal IT industry. 
+    member_card_title: Benjamin Smith
+    member_card_text: An entrepreneur by day and a developer by night, Ben is a seasoned engineer who has built several platforms from the ground up. Previously a lead engineer developing custom platform based solutions in the healthcare industry, and building lasting solutions at a Fintech Startup, Ben knows the infrastructure required to build cutting edge technology with security built in. With his experience guiding teams and creative solutioning Ben leads AdapTech's Teams to solve the IT industries toughest problems.
 
   - name: Travis Nguyen
     pic: travis
