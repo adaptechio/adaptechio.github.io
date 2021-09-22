@@ -62,18 +62,15 @@
                                         <ul class="container list-group list-group-horizontal fa-ul">
                                             {% for badge in person.badges %}
                                             <li class="col-{{ 12 | divided_by: person.badges.size }} list-inline-item">
-<!--                                                <i class="fa fa-circle fa-stack-5x text-primary"></i>-->
                                                 <i class="{{ badge.icon }} fa-5x"></i>
                                                 <p>{{badge.text}}</p>
                                             </li>
                                             {% endfor %}
                                         </ul>
                                         <br>
-<!--                                        <ul class="row list-group list-group-horizontal fa-ul">-->
                                         <ul class="container list-group list-group-horizontal fa-ul">
                                             {% for social in person.social %}
                                             <li class="col-{{ 12 | divided_by: person.social.size }} list-inline-item">
-<!--                                            <li class="row-cols-1 list-inline-item">-->
                                                 <a href="{{social.url}}">
                                                     <i class="{{ social.icon }} fa-3x"></i>
                                                     <p>{{social.text}}</p>
