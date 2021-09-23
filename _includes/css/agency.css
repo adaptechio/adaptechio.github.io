@@ -784,7 +784,7 @@ section .contact-card-container {
 
 .header-box {
     background: rgba(0, 0, 0, 0.80);
-    width:720px;
+    width: 100%;
 }
 
 footer {
