@@ -1063,3 +1063,49 @@ body {
     color: black;
     transform: rotateY(180deg);
   }
+
+
+#team-pill-container button {
+    width: 200px;
+}
+
+section#team img#img-team {
+    height: auto;
+    max-width: 75%;
+}
+
+section#team .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #{{ site.data.template.color.primary }};
+}
+
+section#team .nav-link {
+    color: #{{ site.data.template.color.primary }};
+}
+
+section#team .tab-content {
+    border: 1px solid rgba(0,0,0,.125);
+    border-top-style: none!important;
+
+}
+
+
+
+
+@media(min-width:1182px) {
+    section#team .pill-card-height {
+        height: 581px;
+    }
+}
+
+@media(min-width:1362px) {
+    section#team .pill-card-height {
+        height: 581px;
+    }
+}
+
+@media(min-width:1382px) {
+    section#team .pill-card-height {
+        height: 671px;
+    }
+}
