@@ -1088,3 +1088,24 @@ section#team .tab-content {
     border-top-style: none!important;
 
 }
+
+
+
+
+@media(min-width:1182px) {
+    section#team .pill-card-height {
+        height: 581px;
+    }
+}
+
+@media(min-width:1362px) {
+    section#team .pill-card-height {
+        height: 581px;
+    }
+}
+
+@media(min-width:1382px) {
+    section#team .pill-card-height {
+        height: 671px;
+    }
+}
