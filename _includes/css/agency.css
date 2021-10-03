@@ -1044,8 +1044,21 @@ body {
 
   /* Style the front side */
   .flip-box-front {
-    background-color: #{{ site.data.template.color.primary }};
+    /* background-color: #{{ site.data.template.color.primary }}; */
     color: white;
+    overflow: hidden;
+    height: 200px;
+  }
+
+  .flip-box-front #img-mission {
+    max-width: 100%;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+    filter: brightness(50%);
   }
 
   .flip-box-front h2 {
@@ -1063,6 +1076,15 @@ body {
     color: black;
     transform: rotateY(180deg);
   }
+
+.flip-box-front .img-mission {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+}
 
 
 #team-pill-container button {

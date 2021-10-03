@@ -6,12 +6,16 @@ value_header: Values
 value_list:
   - key: People First
     description: Employees are one of the fundamental building blocks of a company. AdapTech understands the value of its employees; we empower our employees with challenges and opportunities that help them reach their career goals.
+    background_image: people_first
 
   - key: Solution Oriented
     description: We build advanced, battle tested, technical solutions that not only solve problems, but do so in a scaling, adaptable manner. This provides clients with brilliant solutions, capable of adapting to future market changes or user feedback.
+    background_image: solution_first
 
   - key: Collaboration
     description: We encourage everyone, at AdapTech, to share their ideas and perspectives fostering a strong supportive work environment towards mission success for our clients.
+    background_image: collab
 
   - key: Accountability
     description: We uphold high standards honestly meeting industry compliance and preventing malicious intent. We empower trust and integrity by involving everyone with key principles of decent human conduct in life and professionalism.
+    background_image: accountability
