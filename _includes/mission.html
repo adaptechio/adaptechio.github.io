@@ -17,21 +17,23 @@
             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 my-1">
                 <div class="flip-box ">
                     <div class="flip-box-inner">
-                        <div class="flip-box-front shadow-sm">
-                            <div>
-                                <h2>{{ value.key }}</h2>
-                            </div>
-                            
+                        <div class="flip-box-front shadow">
+                            <img id="img-mission" class=""
+                                src="{{ value.background_image | prepend: 'img/mission/' | append: '.png' }}"
+                                alt="{{value.background_image}} picture">
+                            <h2>{{ value.key }}</h2>
+
+
                         </div>
-                        <div class="flip-box-back h-100 w-100 shadow-sm">
+                        <div class="flip-box-back h-100 w-100 shadow">
                             <div class="justify-content-center m-5">
-                               {{ value.description }}
+                                {{ value.description }}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             {% endfor %}
         </div>
     </div>
