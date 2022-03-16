@@ -354,6 +354,13 @@ header .intro-text .intro-heading {
     }
 }
 
+@media (min-width: 992px) { 
+    header .user-menu {
+        flex-grow: 0;
+    }
+    
+}
+
 section {
     padding: 100px 0;
 }
