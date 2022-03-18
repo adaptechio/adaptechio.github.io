@@ -321,35 +321,28 @@ header .intro-text .intro-lead-in {
 
 header .intro-text .intro-heading {
     margin-bottom: 25px;
-    text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
-    font-size: 50px;
+    font-size: 12vw;
     font-weight: 700;
     line-height: 50px;
 }
 
-@media(min-width:768px) {
+@media(min-width:512px) {
     header .intro-text {
-        /*padding-top: 200px;*/
         padding-top: 300px;
-        /*padding-bottom: 150px;*/
         padding-bottom: 200px;
     }
 
     header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
         font-family: {{ site.data.template.font.secondary }};
         font-size: 40px;
-        font-style: italic;
         line-height: 40px;
     }
 
     header .intro-text .intro-heading {
         margin-bottom: 50px;
-        text-transform: uppercase;
         font-family: {{ site.data.template.font.primary }};
         font-size: 75px;
-        font-weight: 700;
         line-height: 75px;
     }
 }
