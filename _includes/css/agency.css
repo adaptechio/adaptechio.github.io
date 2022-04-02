@@ -293,7 +293,6 @@ header.header-image{
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/{{ site.data.images.title_background_image }}');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -304,6 +303,14 @@ header.header-image{
 img.header-image {
     opacity: 0.4;
     filter: alpha(opacity=40); /* msie */
+}
+
+.no-webp header.header-image {
+    background-image: url('{{ site.baseurl }}/img/{{ site.data.images.title_background_image }}');
+}
+
+.webp header.header-image {
+    background-image: url('{{ site.baseurl }}/img/{{ site.data.images.title_background_webp }}');
 }
 
 header .intro-text {

@@ -18,9 +18,11 @@
                 <div class="flip-box ">
                     <div class="flip-box-inner">
                         <div class="flip-box-front shadow">
-                            <img id="img-mission" class=""
-                                src="{{ value.background_image | prepend: 'img/mission/' | append: '.png' }}"
-                                alt="{{value.background_image}} picture">
+                            <picture>
+                                <source srcset="{{ value.background_image | prepend: 'img/webp/mission/' | append: '.webp' }}" type="image/webp">
+                                <source srcset="{{ value.background_image | prepend: 'img/mission/' | append: '.png' }}" type="image/png">
+                                <img id="img-mission" src="{{ value.background_image | prepend: 'img/mission/' | append: '.png' }}" alt="{{value.background_image}} picture">
+                            </picture>
                             <h2>{{ value.key }}</h2>
 
 
