@@ -24,11 +24,9 @@
                                 <img id="img-mission" src="{{ value.background_image | prepend: 'img/mission/' | append: '.png' }}" alt="{{value.background_image}} picture">
                             </picture>
                             <h2>{{ value.key }}</h2>
-
-
                         </div>
-                        <div class="flip-box-back h-100 w-100 shadow">
-                            <div class="justify-content-center m-5">
+                        <div class="flip-box-back shadow">
+                            <div class="mission-value-desc px-4">
                                 {{ value.description }}
                             </div>
                         </div>
