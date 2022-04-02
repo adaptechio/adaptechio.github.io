@@ -17,7 +17,11 @@
                         <li class="{{inverted-class}}">
                             <div class="timeline-image shadow">
                             {% unless time_section.singular_text %}
-                                <img class="card-img-top circle" src="{{time_section.image}}" alt="">
+                                <picture>
+                                    <source srcset="{{time_section.webp}}" type="image/webp">
+                                    <source srcset="{{time_section.image}}" type="image/jpeg">
+                                    <img class="card-img-top circle" src="{{time_section.image}}" alt="">
+                                </picture>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
