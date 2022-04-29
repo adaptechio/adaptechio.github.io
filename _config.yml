@@ -2,6 +2,7 @@ url: https://adaptechio.github.io/
 
 # Site settings
 title: AdapTech LLC
+copyright_date: "01/01/2022"
 email: chameleon@adaptech.io
 description: "This is an awesome description for AdapTech LLC."
 version: "v0.1.0"
