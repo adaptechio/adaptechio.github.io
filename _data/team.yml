@@ -46,4 +46,14 @@ people:
     member_card_title: Thomas Nguyen
     member_card_text: Thomas graduated from Virginia Tech with a bachelor’s degree in Computer Science. His knowledge of system and microservices architecture, development, and sustainment on containers and integration with Amazon Web Services (AWS) nurtures optimize systems. Thomas is experienced in developing features on frontend and backend, administering/securing systems with vulnerability scans and updates, and migrating both personal health information (PHI) and non-PHI data. Thomas understands delivering quality releases with proper version control integrating with multiple dependencies and APIs. He applies his previous knowledge from maintaining Department of Defense (DoD) subnautical systems, developing and maintaining Department of Veteran Affairs (DoVA) health systems, and modernizing Centers for Disease Control and Prevention (CDC) vaccination system towards contemporary systems and services to empower users to solve bigger problems. 
 
+  - name: Chief Strategy Officer
+    pic: austin
+    positions:
+      - ""
+    social:
+      - icon: "fa fa-linkedin-square"
+        url: https://www.linkedin.com/
+    member_card_title: Austin Ludwig
+    member_card_text: With a strong background in sales and marketing data analytics, program competencies utilization and system operations, Austin has helped modernize the front office enterprise data infrastructure for international data leaders such as [...]. Austin has a [X...] Degree from FSU which he utilizies in the restructuring data infrastructure for a multibillion dollar corporation, enabling automation and customization of [...] in marketing, contracting, accounting, and financing. Austin brings a strategic approach to his projects, keeping the end user in mind. 
+
 bottom_message: We're pleased to meet you!

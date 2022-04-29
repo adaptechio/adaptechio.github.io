@@ -14,3 +14,6 @@ social:
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+exclude:
+  - js/node_modules
