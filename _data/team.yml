@@ -2,48 +2,48 @@ header_text: Leadership
 team_text: It's nice to meet you!
 team_text_enabled: false
 people:
-  - name: Chief Executive Officer
+  - name: Benjamin Smith
     pic: ben
-    positions:
-      - ""
+    position: Chief Executive Officer
     social:
       - icon: "fa fa-github"
         url: https://github.com/Benbentwo/
-      - icon: "fa fa-linkedin-square"
+      - icon: "fa fa-linkedin"
         url: https://www.linkedin.com/in/benjamin-smith-15378010a/
-    member_card_title: Benjamin Smith
     member_card_text: An entrepreneur by day and a developer by night, Ben is a seasoned engineer who has built several platforms from the ground up. Previously a lead engineer developing custom platform based solutions in the healthcare industry, and building lasting solutions at a Fintech Startup, Ben knows the infrastructure required to build cutting edge technology with security built in. With his experience guiding teams and creative solutioning Ben leads AdapTech's Teams to solve the IT industries toughest problems.
 
-  - name: Chief Operating Officer
+  - name: Travis Nguyen
     pic: travis
-    positions:
-      - ""
+    position: Chief Operating Officer
     social:
-      - icon: "fa fa-linkedin-square"
+      - icon: "fa fa-linkedin"
         url: https://www.linkedin.com/in/travis-nguyen-2140b2143/
-    member_card_title: Travis Nguyen
     member_card_text: An Information Technology graduate from George Mason University with a desire to work in Cyber Security. Travis went on to obtain his master’s degree in Cybersecurity Technology from University of Maryland Global Campus. As a contractor that has worked on numerous projects, Travis hopes to bring his flexibility and knowledge to AdapTech. Travis has experience as an information assurance specialist working on multiple corporation certifications such as ISO (International Organization for Standardization) 27001, CMMI (Capability Maturity Model Integration), and CMMC (Cybersecurity Maturity Model Certification). Now, Travis has expanded his scope and transitioned to a solution-oriented role, providing his expertise on solution development and pilot programs to the DoS (Department of State). Travis will use this experience to help AdapTech lead the forefront of technology by providing our clients battle-tested solutions and services.
 
-  - name: Chief Security Officer
+  - name: Mohammed Faruq
     pic: mohammed
-    positions:
-      - ""
+    position: Chief Security Officer
     social:
-      - icon: "fa fa-linkedin-square"
+      - icon: "fa fa-linkedin"
         url: https://www.linkedin.com/in/mffaruq/
-    member_card_title: Mohammed Faruq
     member_card_text: Mohammed started his cybersecurity career after graduating from George Mason University with a degree in Information Technology. He has experience consulting government clients in implementing and becoming compliant with Risk Management Framework (RMF), Cybersecurity Maturity Model Compliance (CMMC), and NIST frameworks. With his extensive knowledge in government compliance, Mohammed quickly became acquainted with implementing security solutions like Commercial Solutions for Classified Program (CSfC) to allow the use of commercial solutions for government needs. Along with his experience, Mohammed is DoD 8570 IAT Level II and IAM Level I certified. Mohammed will use his experience to make sure AdapTech meets government compliance and requirements.
 
-  - name: Chief Technology Officer
+  - name: Thomas Nguyen
     pic: thomas
-    positions:
-      - ""
+    position: Chief Technology Officer
     social:
       - icon: "fa fa-github"
         url: https://github.com/thomasnguyen95/
-      - icon: "fa fa-linkedin-square"
+      - icon: "fa fa-linkedin"
         url: https://www.linkedin.com/in/thomas-nguyen-/
-    member_card_title: Thomas Nguyen
     member_card_text: Thomas graduated from Virginia Tech with a bachelor’s degree in Computer Science. His knowledge of system and microservices architecture, development, and sustainment on containers and integration with Amazon Web Services (AWS) nurtures optimize systems. Thomas is experienced in developing features on frontend and backend, administering/securing systems with vulnerability scans and updates, and migrating both personal health information (PHI) and non-PHI data. Thomas understands delivering quality releases with proper version control integrating with multiple dependencies and APIs. He applies his previous knowledge from maintaining Department of Defense (DoD) subnautical systems, developing and maintaining Department of Veteran Affairs (DoVA) health systems, and modernizing Centers for Disease Control and Prevention (CDC) vaccination system towards contemporary systems and services to empower users to solve bigger problems. 
+
+  - name: Austin Ludwig
+    pic: austin
+    position: Chief Strategy Officer
+    social:
+      - icon: "fa fa-linkedin"
+        url: https://www.linkedin.com/in/austin-ludwig-753027134/
+    member_card_text: With a strong background in sales and marketing data analytics, data system administration and auditing, Austin has helped lead the modernization of the enterprise data infrastructure for Neustar, Inc. a leader in global data solutions. Austin has a bachelor’s degree in management information systems which he utilizes in the management of the data infrastructure for a multibillion-dollar corporation, enabling analytics and insights from marketing to customer support. Austin’s skills also include training sales leaders in new ways to find and target customers, using AI modeling and firmographic analytics.
 
 bottom_message: We're pleased to meet you!
