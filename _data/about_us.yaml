@@ -2,13 +2,13 @@ header_text: About Us
 sub_header_text: From __humble__ beginnings to a **strong** future.
 
 history: 
-  - image: img/about/3.jpg
-    webp: img/webp/about/3.webp
+  - image: assets/img/about/3.jpg
+    webp: assets/img/webp/about/3.webp
     date: December 2021
     header: Transition to Full Service
     content: AdapTech has begun gaining traction and established itself in the IT Industry.
-  - image: img/about/4.jpg
-    webp: img/webp/about/4.webp
+  - image: assets/img/about/4.jpg
+    webp: assets/img/webp/about/4.webp
     date: April 2, 2021
     header: AdapTech Founded Virtually
     content: AdapTech was founded virtually, bringing together ideas from across the United States to create a shared vision of the future in technology.

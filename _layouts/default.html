@@ -7,10 +7,13 @@
     <body id="page-top" class="index" style="margin-bottom: 78px;">
 
     {% include header.html %}
-    {% include mission.html %}
-    {% include about.html %}
-    {% include services.html %}
-    {% include contact.html %}
+
+    <main id="content" role="main">
+      <div class="container mx-auto my-auto">
+        {{ content }}
+      </div>
+    </main>
+
     {% include footer.html %}
     {% include scripts.html %}
 

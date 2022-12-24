@@ -30,8 +30,8 @@
                             <div class="row g-0 p-4">
                                 <div>
                                     <picture>
-                                        <source srcset="img/webp/team/team.webp" type="image/webp">
-                                        <source srcset="img/team/team.jpg" type="image/jpeg">
+                                        <source srcset="assets/img/webp/team/team.webp" type="image/webp">
+                                        <source srcset="assets/img/team/team.jpg" type="image/jpeg">
                                         <img id="img-team" class="card-img-top rounded mb-md-auto" src="img/team/team.jpg" alt="team picture">
                                     </picture>
                                     {% if site.data.team.team_text_enabled %}
@@ -52,8 +52,8 @@
                             <div class="row g-0 p-4 pill-card-height">
                                 <div class="col-md-4">
                                     <picture>
-                                        <source srcset="{{ person.pic | prepend: 'img/webp/team/' | append: '.webp' }}" type="image/webp">
-                                        <source srcset="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" type="image/jpeg">
+                                        <source srcset="{{ person.pic | prepend: 'assets/img/webp/team/' | append: '.webp' }}" type="image/webp">
+                                        <source srcset="{{ person.pic | prepend: 'assets/img/team/' | append: '.jpg' }}" type="image/jpeg">
                                         <img id="img-member" class="card-img-top rounded mb-md-auto" src="{{ person.pic | prepend: 'img/team/' | append: '.jpg' }}" alt="{{person.name}} picture">
                                     </picture>
                                 </div>

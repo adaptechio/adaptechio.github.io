@@ -310,7 +310,7 @@ img.header-image {
 }
 
 .webp header.header-image {
-    background-image: url('{{ site.baseurl }}/img/{{ site.data.images.title_background_webp }}');
+    background-image: url('{{ site.baseurl }}assets/img/{{ site.data.images.title_background_webp }}');
 }
 
 header .intro-text {
@@ -631,7 +631,7 @@ aside.clients img {
 
 section#contact {
     background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
+    background-image: url('{{ site.baseurl }}/assets//img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
 }
