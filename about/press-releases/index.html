@@ -9,19 +9,29 @@ filename: index
 </section>
 
 {% for pr in site.press-releases %}
-{{ pr.thumbnail }}
 <section id='pr-{{ pr.title | slugify: "latin" }}' class="bg-light">
 
-    <div class="container ">
-        <h1>
-            {{ pr.title }}
-        </h1>
-        <h2>
-            {{ pr.date | date: "%B %-d %Y" }}
-        </h2>
-        <button>
-            <a href="{{ pr.url }}">READ MORE</a>
-        </button>
+    <div class="container position-relative ">
+        <div class="position-absolute start-50 translate-middle-y bg-dark-subtle">
+            <h2>
+                {{ pr.title }}
+            </h2>
+            <h6>
+                {{ pr.date | date: "%B %-d %Y" }}
+            </h6>
+            <button type="button" class="btn btn-link position-relative text-decoration-none">
+                <!-- TODO: update to link when gh-pages updates jekyll -->
+                <a href="{{ pr.url }}" class="text-decoration-none">READ MORE</a>
+            </button>
+        </div>
+
+
+        <picture class="position-absolute start-60 translate-middle-y img-thumbnail">
+            <source srcset="{{pr.webp | relative_url }}" type="image/webp">
+            <source srcset="{{pr.img | relative_url }}" type="image/jpeg">
+            <img src="{{pr.img | relative_url }}" alt="">
+        </picture>
+
     </div>
 </section>
 {% endfor %}
