@@ -17,6 +17,7 @@ collections:
   press-releases:
     output: true
     permalink: about/:collection/:path
+    sort_by: date
 
 defaults:
   -
@@ -25,6 +26,12 @@ defaults:
       type: "pages"
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: "press-releases"
+    values:
+      layout: "press-releases"
 
 # Build settings
 markdown: kramdown
