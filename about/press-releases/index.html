@@ -1,0 +1,21 @@
+---
+title: Press Releases
+filename: index
+
+---
+
+<section id="press-release-header">
+
+</section>
+
+{% for pr in site.press-releases %}
+{{ pr.thumbnail }}
+<section id="pr-{{ pr.title }}">
+    
+    <div>
+        <h2>
+            {{ pr.title }}
+        </h2>
+    </div>
+</section>
+{% endfor %}

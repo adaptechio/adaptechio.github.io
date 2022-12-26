@@ -12,9 +12,32 @@ social:
   - title: github
     url: http://github.com/adaptechio
 
+
+collections:
+  press-releases:
+    output: true
+    permalink: about/:collection/:path
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
 # Build settings
 markdown: kramdown
 permalink: pretty
 
 exclude:
   - js/node_modules
+  - README.md
+  - .gitignore
+  - docker-compose.yml
+  - Dockerfile
+  - .dockerignore
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - LICENSE
