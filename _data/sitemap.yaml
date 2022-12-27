@@ -1,13 +1,16 @@
 sites_list_title: AdapTech Sitemap
 sites:
-- title: Home
-  url: index.html
+  - title: Top Nav
+    subItems:    
+    - title: Home
+      url: index.html
 
-- title: About
-  url: about/index.html
-
-- title: Press Releases
-  url: about/press-releases/
+  - title: About
+    subItems:
+    - title: About Us
+      url: about/
+    - title: Press Releases
+      url: about/press-releases/
 
 scripts:
 - title: s

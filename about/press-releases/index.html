@@ -4,34 +4,37 @@ filename: index
 
 ---
 
-<section id="press-release-header" class="bg-light">
+<div id="press-release-container">
+    <section id="press-release-header" class="bg-dark">
+        <h1></h1>
+    </section>
 
-</section>
+    {% for pr in site.press-releases %}
+    <section id='pr-{{ pr.title | slugify: "latin" }}' class="bg-light">
 
-{% for pr in site.press-releases %}
-<section id='pr-{{ pr.title | slugify: "latin" }}' class="bg-light">
+        <div class="container d-flex align-items-center justify-content-center">
+            <div class="d-flex bg-dark-subtle pr-list-text-box-left w-50 border border-primary p-4 flex-column justify-content-start">
+                <h2>
+                    {{ pr.title }}
+                </h2>
+                <h6>
+                    {{ pr.date | date: "%B %-d %Y" }}
+                </h6>
+                <hr>
+                <button type="button" class="btn ">
+                    <!-- TODO: update to link when gh-pages updates jekyll -->
+                    <a href="{{ pr.url }}" class="text-decoration-none">READ MORE</a>
+                </button>
+            </div>
 
-    <div class="container position-relative ">
-        <div class="position-absolute start-50 translate-middle-y bg-dark-subtle">
-            <h2>
-                {{ pr.title }}
-            </h2>
-            <h6>
-                {{ pr.date | date: "%B %-d %Y" }}
-            </h6>
-            <button type="button" class="btn btn-link position-relative text-decoration-none">
-                <!-- TODO: update to link when gh-pages updates jekyll -->
-                <a href="{{ pr.url }}" class="text-decoration-none">READ MORE</a>
-            </button>
+            <div id="pr-img-container" class="w-50">
+                <picture>
+                    <source srcset="{{pr.webp | relative_url }}" type="image/webp">
+                    <source srcset="{{pr.img | relative_url }}" type="image/jpeg">
+                    <img src="{{pr.img | relative_url }}" alt="" class="rounded">
+                </picture>
+            </div>
         </div>
-
-
-        <picture class="position-absolute start-60 translate-middle-y img-thumbnail">
-            <source srcset="{{pr.webp | relative_url }}" type="image/webp">
-            <source srcset="{{pr.img | relative_url }}" type="image/jpeg">
-            <img src="{{pr.img | relative_url }}" alt="">
-        </picture>
-
-    </div>
-</section>
-{% endfor %}
+    </section>
+    {% endfor %}
+</div>

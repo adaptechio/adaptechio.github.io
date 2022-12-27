@@ -2,13 +2,12 @@
 color:
   #5cba00 alternative lighter color
   primary: 1e8900
+  primary-light: d7ece5
   secondary: 616161   
   secondary-dark: 373737
   muted: 777
 
 # Font Families
 font:
-  primary: '"Helvetica Neue", Helvetica, Arial, sans-serif'
-  secondary: '"Droid Serif", "Helvetica Neue", Helvetica,Arial,sans-serif'
-#  nav-bar: '"Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive'
-  navbar: '"Helvetica Neue", Helvetica, Arial, sans-serif'
+  primary: "Montserrat"
+  secondary: '"Montserrat", Helvetica,Arial,sans-serif'

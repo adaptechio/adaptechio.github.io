@@ -7,7 +7,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: {{ site.data.template.font.primary }}, Helvetica,Arial,sans-serif;
     transition-property: all;
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
@@ -190,12 +190,11 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: #fff;
     background-image: none;
 }
 
 .navbar-default .navbar-brand {
-    /*font-family: '"Gotham Book", -apple-system, system-ui, "Segoe UI"';*/
     color: #{{ site.data.template.color.primary }};
 }
 
@@ -229,16 +228,20 @@ fieldset[disabled] .btn-xl.active {
     font-family: {{ site.data.template.font.primary }};
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color: #{{ site.data.template.color.primary }};
     -webkit-transition: all ease .35s;
     -moz-transition: all ease .35s;
     transition: all ease .35s;
 }
 
+.navbar-default .nav li ul li a.dropdown-item {
+    text-transform: capitalize;
+}
+
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #{{ site.data.template.color.primary }};
+    color: #{{ site.data.template.color.secondary }};
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -257,7 +260,7 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         padding: 25px 0;
         border: 0;
-        background-color: transparent;
+        background-color: #fff;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -274,14 +277,6 @@ fieldset[disabled] .btn-xl.active {
         border-radius: 3px;
     }
 
-    .navbar-default.navbar-shrink {
-        padding: 10px 0;
-        background-color: #222;
-    }
-
-    .navbar-default.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
 }
 header.header-image::before {
     opacity: 0.4;
@@ -307,10 +302,14 @@ img.header-image {
 
 .no-webp header.header-image {
     background-image: url('{{ site.baseurl }}/img/{{ site.data.images.title_background_image }}');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .webp header.header-image {
     background-image: url('{{ site.baseurl }}assets/img/{{ site.data.images.title_background_webp }}');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 header .intro-text {
@@ -378,12 +377,6 @@ section h3.section-subheading {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
-}
-
-@media(min-width:768px) {
-    section {
-        padding: 150px 0;
-    }
 }
 
 .service-heading {
@@ -631,7 +624,7 @@ aside.clients img {
 
 section#contact {
     background-color: #222;
-    background-image: url('{{ site.baseurl }}/assets//img/map-image.png');
+    background-image: url('{{ site.baseurl }}/assets/img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -719,6 +712,7 @@ section .contact-card-container {
 footer {
     padding: 25px 0;
     text-align: center;
+    background-color: #{{ site.data.template.color.primary-light}};
 }
 
 footer span.copyright {
@@ -980,9 +974,6 @@ section#team .tab-content {
 
 }
 
-
-
-
 @media(min-width:1182px) {
     section#team .pill-card-height {
         height: 581px;
@@ -999,4 +990,18 @@ section#team .tab-content {
     section#team .pill-card-height {
         height: 671px;
     }
+}
+
+#press-release-container div.pr-list-text-box-right {
+    margin-left: -1rem;
+    z-index: 1;
+}
+
+#press-release-container div.pr-list-text-box-left {
+    margin-right: -1rem;
+    z-index: 1;
+}
+
+#press-release-container div#pr-img-container img{
+    height: 300px;
 }
