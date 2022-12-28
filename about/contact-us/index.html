@@ -1,0 +1,39 @@
+---
+title: Contact Us
+filename: index
+
+---
+
+<div>
+    <section class="bg-dark">
+        <h1 class="text-lg-center text-white">CONTACT US</h1>
+    </section>
+    <section class="bg-light">
+
+        <div class="container">
+            <form method="POST" action="https://formspree.io/f/mayzwznl">
+                <div class="row">
+                    <div class="col mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="First Last">
+                    </div>
+<!--                    <div class="col mb-3">-->
+<!--                        <label for="phone" class="form-label">Phone Number</label>-->
+<!--                        <input type="tel" required class="form-control" id="phone" placeholder="(xxx) xxx-xxxx">-->
+<!--                    </div>-->
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" required class="form-control" id="email" name="email" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="message" name="message" class="form-label">Questions / Comments</label>
+                    <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>

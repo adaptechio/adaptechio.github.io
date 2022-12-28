@@ -353,11 +353,11 @@ header .intro-text .intro-heading {
     }
 }
 
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
     header .user-menu {
         flex-grow: 0;
     }
-    
+
 }
 
 section {
@@ -993,13 +993,13 @@ section#team .tab-content {
 }
 
 #press-release-container div.pr-list-text-box-right {
-    margin-left: -1rem;
+    margin-left: 3rem;
     z-index: 1;
     width: 50%;
 }
 
 #press-release-container div.pr-list-text-box-left {
-    margin-right: -1rem;
+    margin-right: 3rem;
     z-index: 1;
     width: 50%;
 }
@@ -1017,7 +1017,7 @@ section#team .tab-content {
     #press-release-container section div.container {
         flex-direction: column;
     }
-    
+
     #press-release-container div.pr-list-text-box-left {
         width: 80%;
         margin: 0;
