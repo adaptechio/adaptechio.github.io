@@ -13,7 +13,15 @@ filename: index
     <section id='pr-{{ pr.title | slugify: "latin" }}' class="bg-light">
 
         <div class="container d-flex align-items-center justify-content-center">
-            <div class="d-flex bg-dark-subtle pr-list-text-box-left w-50 border border-primary p-4 flex-column justify-content-start">
+            <div id="pr-img-container">
+                <picture>
+                    <source srcset="{{pr.webp | relative_url }}" type="image/webp">
+                    <source srcset="{{pr.img | relative_url }}" type="image/jpeg">
+                    <img src="{{pr.img | relative_url }}" alt="" class="rounded">
+                </picture>
+            </div>
+
+            <div class="d-flex bg-dark-subtle pr-list-text-box-right border border-primary p-4 flex-column justify-content-start">
                 <h2>
                     {{ pr.title }}
                 </h2>
@@ -25,14 +33,6 @@ filename: index
                     <!-- TODO: update to link when gh-pages updates jekyll -->
                     <a href="{{ pr.url }}" class="text-decoration-none">READ MORE</a>
                 </button>
-            </div>
-
-            <div id="pr-img-container" class="w-50">
-                <picture>
-                    <source srcset="{{pr.webp | relative_url }}" type="image/webp">
-                    <source srcset="{{pr.img | relative_url }}" type="image/jpeg">
-                    <img src="{{pr.img | relative_url }}" alt="" class="rounded">
-                </picture>
             </div>
         </div>
     </section>

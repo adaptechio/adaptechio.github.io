@@ -995,13 +995,40 @@ section#team .tab-content {
 #press-release-container div.pr-list-text-box-right {
     margin-left: -1rem;
     z-index: 1;
+    width: 50%;
 }
 
 #press-release-container div.pr-list-text-box-left {
     margin-right: -1rem;
     z-index: 1;
+    width: 50%;
 }
+
+#press-release-container div#pr-img-container{
+    width: auto;
+}
+
 
 #press-release-container div#pr-img-container img{
     height: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+    #press-release-container section div.container {
+        flex-direction: column;
+    }
+    
+    #press-release-container div.pr-list-text-box-left {
+        width: 80%;
+        margin: 0;
+        margin-top: -2rem;
+    }
+    #press-release-container div.pr-list-text-box-right {
+        width: 80%;
+        margin: 0;
+        margin-top: -2rem;
+    }
+    #press-release-container div#pr-img-container {
+        width: auto;
+    }
 }
