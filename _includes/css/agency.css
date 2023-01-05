@@ -12,7 +12,7 @@ body {
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     transition-delay: 0s;
-    color: #{{ site.data.template.color.secondary-dark }};
+    color: #{{ site.data.template.color.secondary }};
 }
 
 /* Service.html paragraph per service*/
@@ -712,7 +712,8 @@ section .contact-card-container {
 footer {
     padding: 25px 0;
     text-align: center;
-    background-color: #{{ site.data.template.color.primary-light}};
+    color: #FFF;
+    background-color: #{{ site.data.template.color.secondary}};
 }
 
 footer span.copyright {
