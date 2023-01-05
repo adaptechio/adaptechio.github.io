@@ -4,34 +4,34 @@ filename: index
 
 ---
 
-<div id="press-release-container">
-    <section id="press-release-header" class="bg-dark">
+<div id="contracts-container">
+    <section id="contracts-header" class="bg-dark">
         <h1></h1>
     </section>
 
-    {% for pr in site.press-releases %}
-    <section id='pr-{{ pr.title | slugify: "latin" }}' class="bg-light">
+    {% for contract in site.contracts %}
+    <section class="bg-light contracts-{{ contracts.title | slugify: 'latin' }}">
 
         <div class="d-flex align-items-center justify-content-center">
-            <div id="pr-img-container">
+            <div class="contract-img-container">
                 <picture>
-                    <source srcset="{{pr.webp | relative_url }}" type="image/webp">
-                    <source srcset="{{pr.img | relative_url }}" type="image/jpeg">
-                    <img src="{{pr.img | relative_url }}" alt="" class="rounded">
+                    <source srcset="{{contract.webp | relative_url }}" type="image/webp">
+                    <source srcset="{{contract.img | relative_url }}" type="image/jpeg">
+                    <img src="{{contract.img | relative_url }}" alt="" class="rounded">
                 </picture>
             </div>
 
-            <div class="d-flex pr-list-text-box-right p-4 flex-column justify-content-start">
+            <div class="d-flex contract-list-text-box-right p-4 flex-column justify-content-start">
                 <h2>
-                    {{ pr.title }}
+                    {{ contract.title }}
                 </h2>
                 <h6>
-                    {{ pr.date | date: "%B %-d %Y" }}
+                    {{ contract.date | date: "%B %-d %Y" }}
                 </h6>
                 <hr>
                 <button type="button" class="btn ">
                     <!-- TODO: update to link when gh-pages updates jekyll -->
-                    <a href="{{ pr.url }}" class="text-decoration-none">READ MORE</a>
+                    <a href="{{ contract.url }}" class="text-decoration-none">READ MORE</a>
                 </button>
             </div>
         </div>

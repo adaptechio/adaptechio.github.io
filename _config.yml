@@ -16,7 +16,7 @@ social:
 
 
 collections:
-  press-releases:
+  contracts:
     output: true
     permalink: about/:collection/:path
     sort_by: date
@@ -31,9 +31,9 @@ defaults:
   -
     scope:
       path: ""
-      type: "press-releases"
+      type: "contracts"
     values:
-      layout: "press-releases"
+      layout: "contracts"
 
 # Build settings
 markdown: kramdown
