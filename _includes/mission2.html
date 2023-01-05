@@ -1,0 +1,54 @@
+<!-- About Section -->
+<section id="mission" class="bg-secondary-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">{{site.data.mission.header_text}}</h2>
+                <p class="section-subheading text-muted mb-5">{{site.data.mission.summary }}</p>
+                <hr>
+                <h3>{{site.data.mission.mission_statement }}</h3>
+                <hr>
+            </div>
+        </div>
+
+        <div class="mt-5 row text-center justify-content-center">
+            <div class="values-container">
+                <h2 class="section-heading">{{site.data.mission.value_header}}</h2>
+                {% for value in site.data.mission.value_list %}
+                {% assign reverse = value.reverse %}
+                {% assign reverse-class = "" %}
+                {% if reverse %}{% assign reverse-class = "flex-row-reverse" %}{% endif %}
+                <div class="align-items-center justify-content-center p-3">
+                    <div class="row {{reverse-class}}">
+                        <div class="position-relative overflow-hidden col-lg-6 col-md-6 col-12">
+                            <picture>
+                                <source
+                                    srcset="{{ value.background_image | prepend: 'assets/img/webp/mission/' | append: '.webp' }}"
+                                    type="image/webp">
+                                <source
+                                    srcset="{{ value.background_image | prepend: 'assets/img/mission/' | append: '.png' }}"
+                                    type="image/png">
+                                <img id="img-mission"
+                                    src="{{ value.background_image | prepend: 'assets/img/mission/' | append: '.png' }}"
+                                    class="top-0 start-0 w-100 h-100 object-fit-cover rounded"
+                                    loading="lazy"
+                                    alt="{{value.background_image}} picture">
+                            </picture>
+                        </div>
+                        <div class="flex-column col-lg-6 col-md-6 col-12 align-items-center justify-content-center my-md-auto mt-4">
+                            <h3>{{ value.key }}</h3>
+                            <hr />
+                            <div class="mission-value-desc p-4">
+                                {{ value.description }}
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                {% endfor %}
+            </div>
+            </div>
+            
+    </div>
+</section>

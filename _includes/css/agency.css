@@ -12,7 +12,7 @@ body {
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
     transition-delay: 0s;
-    color: #{{ site.data.template.color.secondary }};
+    color: #{{ site.data.template.color.primary-light }};
 }
 
 /* Service.html paragraph per service*/
@@ -73,6 +73,7 @@ h6 {
     text-transform: uppercase;
     font-family: {{ site.data.template.font.primary }};
     font-weight: 700;
+    color: #{{ site.data.template.color.primary }};
 }
 
 .img-centered {
@@ -86,6 +87,27 @@ h6 {
 .bg-darkest-gray {
     background-color: #222;
 }
+
+.bg-primary {
+    background-color: #{{ site.data.template.color.primary }}!important;
+}
+
+.bg-primary-dark {
+    background-color: #{{ site.data.template.color.primary-dark }}!important;
+}
+
+.bg-primary-light {
+    background-color: #{{ site.data.template.color.primary-light }}!important;
+}
+
+.bg-secondary {
+    background-color: #{{ site.data.template.color.secondary }}!important;
+}
+
+.bg-secondary-light {
+    background-color: #{{ site.data.template.color.secondary-light }}!important;
+}
+
 
 .btn-primary {
     border-color: #{{ site.data.template.color.primary }};
@@ -313,7 +335,7 @@ img.header-image {
 }
 
 header .intro-text {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
@@ -323,6 +345,7 @@ header .intro-text .intro-lead-in {
     font-size: 22px;
     font-style: italic;
     line-height: 22px;
+    color: #{{ site.data.template.color.primary-dark}};
 }
 
 header .intro-text .intro-heading {
@@ -335,7 +358,7 @@ header .intro-text .intro-heading {
 
 @media(min-width:512px) {
     header .intro-text {
-        padding-top: 300px;
+        padding-top: 200px;
         padding-bottom: 200px;
     }
 
@@ -629,10 +652,6 @@ section#contact {
     background-repeat: no-repeat;
 }
 
-section#contact .section-heading {
-    color: #fff;
-}
-
 section#contact .form-group {
     margin-bottom: 25px;
 }
@@ -700,20 +719,19 @@ section#contact .text-align-right {
 }
 
 section .contact-card-container {
-    background: rgba(0, 0, 0, 0.50);
+    background: #{{ site.data.template.color.secondary-light}}95;
     width:380px;
 }
 
 .header-box {
-    background: rgba(0, 0, 0, 0.80);
-    width: 100%;
+    background: #{{ site.data.template.color.secondary-light}}95;
 }
 
 footer {
     padding: 25px 0;
     text-align: center;
     color: #FFF;
-    background-color: #{{ site.data.template.color.secondary}};
+    background-color: #{{ site.data.template.color.primary-light}};
 }
 
 footer span.copyright {

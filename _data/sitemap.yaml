@@ -7,12 +7,14 @@ sites:
 
   - title: About
     subItems:
-    - title: Contact Us
-      url: about/contact-us/
 #    - title: About Us
 #      url: about/
+    - title: What We Do
+      url: about/capabilities/
     - title: Contracts
       url: about/contracts/
+    - title: Contact Us
+      url: about/contact-us/
 
 scripts:
 - title: s
