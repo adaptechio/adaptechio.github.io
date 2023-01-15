@@ -1,0 +1,14 @@
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  #5cba00 alternative lighter color
+  primary-dark: 0D1B2A
+  primary: 1B263B
+  primary-light: 415A77
+  secondary: 9BAAC0   
+  secondary-light: E0E1DD
+  muted: 777
+
+# Font Families
+font:
+  primary: "Montserrat"
+  secondary: '"Montserrat", Helvetica,Arial,sans-serif'

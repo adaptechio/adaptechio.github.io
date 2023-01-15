@@ -1,0 +1,17 @@
+---
+version: '3'
+
+services:
+  adaptechio-site:
+    build:
+      context: ./
+    restart: unless-stopped
+    environment:
+      SITE_VERSION: dev
+    labels:
+      - "ORG=AdapTech.io"
+    volumes:
+      - "./:/usr/src/app"
+      - "./_site/:/_site/"
+    ports:
+    - "4000:4000"

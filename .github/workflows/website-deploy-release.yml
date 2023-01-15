@@ -1,0 +1,60 @@
+name: "Website Deploy Release"
+
+on:
+  workflow_dispatch:
+
+  release:
+    types:
+      - published
+
+env:
+  AWS_REGION: us-west-2
+  IAM_ROLE_ARN: arn:aws:iam::832922294074:role/adpt-core-usw2-corp-adaptech-website-spa-gha
+  IAM_ROLE_SESSION_NAME: adaptech-website-ci-deploy-release
+  S3_BUCKET_NAME: adpt-core-usw2-corp-adaptech-website-spa-origin
+
+# These permissions are needed to interact with the GitHub's OIDC Token endpoint
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  website-deploy-release:
+    runs-on: ubuntu-latest
+
+    environment:
+      name: production
+      url: https://atmos.tools
+
+    steps:
+      # https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.IAM_ROLE_ARN }}
+          role-session-name: ${{ env.IAM_ROLE_SESSION_NAME }}
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: "website/.nvmrc"
+
+      - name: Install Dependencies and Build Website
+        run: |
+          node --version
+          cd website
+          npm install --only=production
+          npm run build:site
+
+      - name: Copy Website to S3 Bucket
+        run: |
+          cd website/build
+          aws sts get-caller-identity
+          aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}
+          aws s3 ls s3://${{ env.S3_BUCKET_NAME }} --recursive --human-readable --summarize

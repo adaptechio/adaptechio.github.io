@@ -1,0 +1,60 @@
+name: "Website Deploy Preview"
+
+on:
+  workflow_dispatch:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+    paths:
+      - "website/**"
+
+env:
+  AWS_REGION: us-west-2
+  IAM_ROLE_ARN: arn:aws:iam::832922294074:role/adpt-core-usw2-corp-adaptech-website-spa-gha
+  IAM_ROLE_SESSION_NAME: adaptech-website-ci-deploy-pr-${{ github.event.pull_request.number }}
+  S3_BUCKET_NAME: adpt-core-usw2-corp-adaptech-website-spa-origin
+  PR_NUMBER: ${{ github.event.pull_request.number }}
+
+# These permissions are needed to interact with the GitHub's OIDC Token endpoint
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  website-deploy-preview:
+    # Do not deploy the website to the preview environment if the PR has the label 'website-no-deploy'
+    if: ${{ !contains(github.event.*.labels.*.name, 'website-no-deploy') }}
+
+    runs-on: ubuntu-latest
+
+    environment:
+      name: preview
+      url: https://pr-${{ env.PR_NUMBER }}.atmos-docs.ue2.dev.plat.cloudposse.org
+
+    steps:
+      # https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ${{ env.AWS_REGION }}
+          role-to-assume: ${{ env.IAM_ROLE_ARN }}
+          role-session-name: ${{ env.IAM_ROLE_SESSION_NAME }}
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '2.6' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - name: Copy Website to S3 Bucket PR Folder
+        run: |
+          cd _site
+          aws sts get-caller-identity
+          aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}/pr-${{ env.PR_NUMBER }}/
+          aws s3 ls s3://${{ env.S3_BUCKET_NAME }}/pr-${{ env.PR_NUMBER }}/ --recursive --human-readable --summarize

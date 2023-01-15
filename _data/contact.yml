@@ -1,0 +1,9 @@
+header_text: Contact Us
+subheader_text: Want to learn more?
+subheader_text_note: Contact us!
+poc_list:
+  - key: Email
+    value: info@adaptech.io
+
+  - key: Mailing Address
+    value: 14811 Maidstone Court <br > Centreville, VA 20120

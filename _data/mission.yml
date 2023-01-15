@@ -1,0 +1,25 @@
+header_text: Mission
+summary: AdapTech is a technical service company focused on providing our clients with scalable and sustainable solutions. We achieve this by empowering our employees with opportunities to develop their skillsets leading to more innovative solutions. AdapTech is focused on creating a supportive work environment where employees are encouraged to collaborate and share their ideas to help our clients lead the forefront of technology.
+mission_statement: A Company founded in honest helping hands, paving the way forward with stark technical solutions for our employees and partners.
+
+value_header: Values
+value_list:
+  - key: People First
+    reverse: false
+    description: Employees are one of the fundamental building blocks of a company. AdapTech understands the value of its employees; we empower our employees with challenges and opportunities that help them reach their career goals.
+    background_image: people_first
+
+  - key: Solution Oriented
+    reverse: true
+    description: We build advanced, battle tested, technical solutions that not only solve problems, but do so in a scaling, adaptable manner. This provides clients with brilliant solutions, capable of adapting to future market changes or user feedback.
+    background_image: solution_first
+
+  - key: Collaboration
+    reverse: false
+    description: We encourage everyone, at AdapTech, to share their ideas and perspectives fostering a strong supportive work environment towards mission success for our clients.
+    background_image: collab
+
+  - key: Accountability
+    reverse: true
+    description: We uphold high standards honestly meeting industry compliance and preventing malicious intent. We empower trust and integrity by involving everyone with key principles of decent human conduct in life and professionalism.
+    background_image: accountability

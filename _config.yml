@@ -1,0 +1,61 @@
+url: https://adaptechio.github.io/
+
+# Site settings
+title: AdapTech
+copyright_date: "01/01/2022"
+email: chameleon@adaptech.io
+description: "Paving the way forward with versatile technical solutions."
+version: "v0.2.0"
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: github
+    url: https://github.com/adaptechio
+  - title: linkedin
+    url: https://www.linkedin.com/company/adaptechio
+
+
+collections:
+  contracts:
+    output: true
+    permalink: about/:collection/:path
+    sort_by: date
+  capabilities:
+    output: true
+    permalink: about/:collection/:path
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "contracts"
+    values:
+      layout: "contracts"
+  -
+    scope:
+      path: ""
+      type: "capabilities"
+    values:
+      layout: "capabilities"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - js/node_modules
+  - README.md
+  - .gitignore
+  - docker-compose.yml
+  - Dockerfile
+  - .dockerignore
+  - Gemfile
+  - Gemfile.lock
+  - CNAME
+  - LICENSE
