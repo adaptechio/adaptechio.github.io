@@ -7,8 +7,9 @@ on:
       - opened
       - synchronize
       - reopened
-    paths:
-      - "website/**"
+    paths-ignore:
+      - 'Dockerfile'
+      - 'README.md'
 
 env:
   AWS_REGION: us-west-2
@@ -30,8 +31,9 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
+      # https://github.com/actions/runner/issues/998
       name: preview
-      url: https://pr-${{ env.PR_NUMBER }}.atmos-docs.ue2.dev.plat.cloudposse.org
+      url: https://pr-${{ env.PR_NUMBER }}.dev.usw2.adaptech.io
 
     steps:
       # https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions
@@ -49,8 +51,12 @@ jobs:
 
       - uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '2.6' # Not needed with a .ruby-version file
+          ruby-version: '3.0' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - name: Build Site
+        run: |
+          bundle exec jekyll build
 
       - name: Copy Website to S3 Bucket PR Folder
         run: |
