@@ -10,23 +10,25 @@ filename: index
     </section>
 
     {% for capability in site.capabilities %}
+    {% if capability.published %}
+
     <section class="bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <!-- <picture>
-                        <source srcset="{{capability.webp | relative_url }}" type="image/webp">
-                        <source srcset="{{capability.img | relative_url }}" type="image/jpeg">
-                        <img src="{{capability.img | relative_url }}" alt="" class="rounded">
-                    </picture> -->
+                <div class="col-lg-2 col-md-6 col-12">
+                    <span class="fa-stack fa-4x card-img-top w-100">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa {{capability.thumbnail}} fa-stack-1x fa-inverse"></i>
+                    </span>
                 </div>
-    
-                <div class="col-lg-6 col-md-6 col-12">
+                <div class="col-lg col-md-6 col-12">
                     <h2>
                         {{ capability.title }}
                     </h2>
                     <h6>
-                        {{ capability.date | date: "%B %-d %Y" }}
+                        {% if capability.show_date %}
+                            {{ capability.date | date: "%B %-d %Y" }}
+                        {% endif %}
                     </h6>
                     <hr>
                     <button type="button" class="btn ">
@@ -35,8 +37,10 @@ filename: index
                     </button>
                 </div>
             </div>
-            
+
         </div>
     </section>
+
+    {% endif %}
     {% endfor %}
 </div>
