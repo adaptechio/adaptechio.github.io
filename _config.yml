@@ -19,10 +19,13 @@ collections:
   contracts:
     output: true
     permalink: /about/:collection/:path/
+<<<<<<< HEAD
     sort_by: date
   capabilities:
     output: true
     permalink: /about/:collection/:path/
+=======
+>>>>>>> cleanup
     sort_by: date
 
 defaults:
