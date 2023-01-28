@@ -20,6 +20,10 @@ collections:
     output: true
     permalink: about/:collection/:path
     sort_by: date
+  capabilities:
+    output: true
+    permalink: about/:collection/:path
+    sort_by: date
 
 defaults:
   -
@@ -34,6 +38,13 @@ defaults:
       type: "contracts"
     values:
       layout: "contracts"
+
+  -
+    scope:
+      path: ""
+      type: "capabilities"
+    values:
+      layout: "capabilities"
 
 # Build settings
 markdown: kramdown
