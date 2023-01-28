@@ -18,14 +18,11 @@ social:
 collections:
   contracts:
     output: true
-    permalink: /about/:collection/:path/
-<<<<<<< HEAD
+    permalink: /about/:collection/:path/index.html
     sort_by: date
   capabilities:
     output: true
-    permalink: /about/:collection/:path/
-=======
->>>>>>> cleanup
+    permalink: /about/:collection/:path/index.html
     sort_by: date
 
 defaults:
