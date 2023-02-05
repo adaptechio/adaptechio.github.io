@@ -2,7 +2,7 @@
 title: Software Development
 date: 2023-01-29
 img: /assets/img/clients/dova_01.png
-thumbnail: fa-cloud
+thumbnail: fa-inverse fa-code
 alt: image-alt
 category: capabilities
 published: true
