@@ -1,4 +1,3 @@
-url: https://adaptechio.github.io/
 
 # Site settings
 title: AdapTech
@@ -38,12 +37,6 @@ defaults:
       type: "contracts"
     values:
       layout: "contracts"
-  -
-    scope:
-      path: ""
-      type: "capabilities"
-    values:
-      layout: "capabilities"
 
 # Build settings
 markdown: kramdown

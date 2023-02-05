@@ -9,9 +9,9 @@ on:
 
 env:
   AWS_REGION: us-west-2
-  IAM_ROLE_ARN: arn:aws:iam::832922294074:role/adpt-core-usw2-corp-adaptech-website-spa-gha
+  IAM_ROLE_ARN: arn:aws:iam::832922294074:role/adpt-core-usw2-corp-spa-s3-cloudfront-staging-gha
   IAM_ROLE_SESSION_NAME: adaptech-website-ci-deploy-release
-  S3_BUCKET_NAME: adpt-core-usw2-corp-adaptech-website-spa-origin
+  S3_BUCKET_NAME: adpt-core-usw2-corp-spa-s3-cloudfront-staging-origin
 
 # These permissions are needed to interact with the GitHub's OIDC Token endpoint
 permissions:
@@ -23,8 +23,8 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: production
-      url: https://atmos.tools
+      name: staging
+      url: https://staging.usw2.adaptech.io
 
     steps:
       # https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions
@@ -40,21 +40,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
+      - uses: ruby/setup-ruby@v1
         with:
-          node-version-file: "website/.nvmrc"
+          ruby-version: '3.0' # Not needed with a .ruby-version file
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: Install Dependencies and Build Website
+      - name: Build Site
         run: |
-          node --version
-          cd website
-          npm install --only=production
-          npm run build:site
+          bundle exec jekyll build
 
-      - name: Copy Website to S3 Bucket
+      - name: Copy Website to S3 Bucket PR Folder
         run: |
-          cd website/build
+          cd _site
           aws sts get-caller-identity
-          aws s3 sync . s3://${{ env.S3_BUCKET_NAME }}
+          aws s3 sync . s3://${{ env.S3_BUCKET_NAME }} --delete
           aws s3 ls s3://${{ env.S3_BUCKET_NAME }} --recursive --human-readable --summarize
