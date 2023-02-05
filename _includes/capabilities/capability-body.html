@@ -3,9 +3,15 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <p>{{include.date | date: "%B %-d %Y"}}</p>
-                <p>{{include.category}}</p>
-                <p>{{include.img}}</p>
+<!--                <p>{{include.category}}</p>-->
+                <img height="200px" src="{{include.img}}"></img>
                 <p>{{include.description}}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                {{include.content}}
             </div>
         </div>
     </div>

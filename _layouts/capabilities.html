@@ -5,11 +5,21 @@ layout: default
 <div id="capabilities-detail-container">
     <!-- header -->
     <div>
-        Header
+        {% include capabilities/capability-header.html title=page.title %}
     </div>
     <!-- body -->
     <div>
-        Body
+        {%
+            include capabilities/capability-body.html
+            content=page.content
+            title=page.title
+            date=page.date
+            category=page.category
+            img=page.img
+            thumbnail=page.thumbnail
+            alt=page.alt
+            description=page.description
+        %}
     </div>
     <!-- misc -->
 </div>

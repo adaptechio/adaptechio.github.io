@@ -2,9 +2,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
+                <div class="contract-img-container">
+                    <picture>
+                        <source srcset="{{include.webp | relative_url }}" type="image/webp">
+                        <source srcset="{{include.img | relative_url }}" type="image/jpeg">
+                        <img src="{{include.img | relative_url }}" alt="" height="200px" class="rounded">
+                    </picture>
+                </div>
+                <br>
                 <p>{{include.date | date: "%B %-d %Y"}}</p>
-                <p>{{include.category}}</p>
-                <p>{{include.img}}</p>
                 <p>{{include.description}}</p>
             </div>
         </div>
