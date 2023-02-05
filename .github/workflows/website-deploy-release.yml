@@ -23,8 +23,8 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: production
-      url: https://dev.usw2.adaptech.io
+      name: staging
+      url: https://staging.usw2.adaptech.io
 
     steps:
       # https://github.com/marketplace/actions/configure-aws-credentials-action-for-github-actions
