@@ -11,7 +11,7 @@ env:
   AWS_REGION: us-west-2
   IAM_ROLE_ARN: arn:aws:iam::832922294074:role/adpt-core-usw2-corp-spa-s3-cloudfront-staging-gha
   IAM_ROLE_SESSION_NAME: adaptech-website-ci-deploy-release
-  S3_BUCKET_NAME: adpt-core-usw2-corp-spa-s3-cloudfront-origin
+  S3_BUCKET_NAME: adpt-core-usw2-corp-spa-s3-cloudfront-staging-origin
 
 # These permissions are needed to interact with the GitHub's OIDC Token endpoint
 permissions:
