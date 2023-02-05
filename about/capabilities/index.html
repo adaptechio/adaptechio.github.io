@@ -6,7 +6,7 @@ filename: index
 
 <div id="capabilities-container">
     <section id="capabilities-header" class="bg-dark">
-        <h1></h1>
+        <h1>What We Do</h1>
     </section>
 
     {% for capability in site.capabilities %}
@@ -17,8 +17,8 @@ filename: index
             <div class="row">
                 <div class="col-lg-2 col-md-6 col-12">
                     <span class="fa-stack fa-4x card-img-top w-100">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa {{capability.thumbnail}} fa-stack-1x fa-inverse"></i>
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas {{capability.thumbnail}} fa-stack-1x fa-inverse"></i>
                     </span>
                 </div>
                 <div class="col-lg col-md-6 col-12">
@@ -27,14 +27,16 @@ filename: index
                     </h2>
                     <h6>
                         {% if capability.show_date %}
-                            {{ capability.date | date: "%B %-d %Y" }}
+                        {{ capability.date | date: "%B %-d %Y" }}
                         {% endif %}
                     </h6>
                     <hr>
-                    <button type="button" class="btn ">
-                        <!-- TODO: update to link when gh-pages updates jekyll -->
-                        <a href="{{ capability.url }}" class="text-decoration-none">READ MORE</a>
-                    </button>
+                    {% if capability.description %}
+                    <p>
+                        {{ capability.description }}
+                    </p>
+                    {% endif %}
+
                 </div>
             </div>
 
