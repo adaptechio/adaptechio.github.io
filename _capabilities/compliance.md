@@ -2,7 +2,7 @@
 title: Compliance
 date: 2023-01-29
 img: /assets/img/clients/dova_01.png
-thumbnail: fa-shield-check
+thumbnail: fa-shield
 alt: image-alt
 category: capabilities
 description: >
