@@ -973,6 +973,13 @@ body {
     width: 200px;
 }
 
+section.medium {
+    padding: 50px
+}
+section.small {
+    padding: 25px
+}
+
 section#team img#img-team {
     height: auto;
     max-width: 75%;
